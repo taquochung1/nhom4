@@ -43,12 +43,12 @@
                 >
               </li>
               <li>
-                <a href="danhmuc.html" class="has-arrow"
+                <a href="index.php?act=adddm" class="has-arrow"
                   ><span>Danh mục</span></a
                 >
               </li>
               <li>
-                <a href="sanpham.html" class="has-arrow"
+                <a href="index.php?act=addsp" class="has-arrow"
                   ><span>Sản phẩm</span></a
                 >
               </li>

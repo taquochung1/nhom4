@@ -63,22 +63,27 @@
 
       <div id="main-content">
         <h1>Thêm loại hàng</h1>
-        <form action="them.php" method="post" enctype="multipart/form-data">
+        <form action="index.php?act=adddm" method="post" enctype="multipart/form-data">
           <div class="form-group">
             <label for="Mã loại">Mã loại</label>
-            <input type="text" id="maLoai" name="maLoai" class="form-control" />
+            <input type="text" name="maloai" disabled>
           </div>
           <div class="form-group">
             <label for="Tên loại">Tên loại</label>
-            <input
-              type="text"
-              id="tenLoai"
-              name="tenLoai"
-              class="form-control"
-            />
+            <input type="text" name="tenloai">
           </div>
-          <button class="btn btn-success">Thêm loại hàng</button>
+          <div>
+          <a href="index.php?act=adddm">   
+          <button class="btn btn-success" name="themmoi">Thêm loại hàng</button> 
+          </a>
+          <a href="index.php?act=listdm">
           <button class="btn btn-success">Danh sách loại hàng</button>
+          </a>
+             
+          <?php
+                            if(isset($thongbao)&&($thongbao!="")) echo $thongbao; 
+                                      
+                        ?>
         </form>
       </div>
     </div>
