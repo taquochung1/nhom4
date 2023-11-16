@@ -1,3 +1,4 @@
+<body class="theme-orange">
     <div id="wrapper">
       <div id="left-sidebar" class="sidebar">
         <div class="navbar-brand">
@@ -19,7 +20,7 @@
           <div class="user-account">
             <div class="user_div">
               <img
-                src="../view/assets/images/user.png"
+                src="../assets/images/user.png"
                 class="user-photo"
                 alt="User Profile Picture"
               />
@@ -37,17 +38,17 @@
           <nav id="left-sidebar-nav" class="sidebar-nav">
             <ul id="main-menu" class="metismenu">
               <li class="active">
-                <a href="index.php"
+                <a href="index.html"
                   ><i class="icon-home"></i><span>Trang chủ</span></a
                 >
               </li>
               <li>
-                <a href="index.php?act=listdm.php" class="has-arrow"
+                <a href="danhmuc.html" class="has-arrow"
                   ><span>Danh mục</span></a
                 >
               </li>
               <li>
-                <a href="index.php?act=listsp.php" class="has-arrow"
+                <a href="sanpham.html" class="has-arrow"
                   ><span>Sản phẩm</span></a
                 >
               </li>
@@ -459,7 +460,7 @@
                         <div class="media">
                           <img
                             class="media-object"
-                            src="../view/assets/images/xs/avatar2.jpg"
+                            src="../assets/images/xs/avatar2.jpg"
                             alt=""
                           />
                           <div class="media-body">
@@ -483,7 +484,7 @@
                         <div class="media">
                           <img
                             class="media-object"
-                            src="../view/assets/images/xs/avatar1.jpg"
+                            src="../assets/images/xs/avatar1.jpg"
                             alt=""
                           />
                           <div class="media-body">
@@ -507,7 +508,7 @@
                         <div class="media">
                           <img
                             class="media-object"
-                            src="../view/assets/images/xs/avatar3.jpg"
+                            src="../assets/images/xs/avatar3.jpg"
                             alt=""
                           />
                           <div class="media-body">
@@ -529,7 +530,7 @@
                         <div class="media mb-0">
                           <img
                             class="media-object"
-                            src="../view/assets/images/xs/avatar2.jpg"
+                            src="../assets/images/xs/avatar2.jpg"
                             alt=""
                           />
                           <div class="media-body">
@@ -621,9 +622,10 @@
     <script src="../view/light/assets/bundles/libscripts.bundle.js"></script>
     <script src="../view/light/assets/bundles/vendorscripts.bundle.js"></script>
 
-    <script src="../view/light/viewassets/bundles/c3.bundle.js"></script>
+    <script src="../view/light/assets/bundles/c3.bundle.js"></script>
     <script src="../view/light/assets/bundles/chartist.bundle.js"></script>
     <script src="../view/light/assets/vendor/toastr/toastr.js"></script>
 
     <script src="../view/light/assets/bundles/mainscripts.bundle.js"></script>
     <script src="../view/light/assets/js/index.js"></script>
+ 
