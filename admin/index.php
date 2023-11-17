@@ -19,12 +19,6 @@ if(isset($_GET['act'])){
                 $listdanhmuc =loadall_danhmuc();
                 include "danhmuc/listdm.php";
                 break;
-            case 'suadm':
-               if(isset($_GET['id'])&&($_GET['id']>0)){
-               $dm=loadone_danhmuc($_GET['id']);
-             }
-            include "danhmuc/updatedm.php";
-            break;
             case 'xoadm':
                 if(isset($_GET['id'])&&($_GET['id']>0)){
                 delete_danhmuc($_GET['id']);
@@ -32,6 +26,12 @@ if(isset($_GET['act'])){
             $sql="select * from danh_muc order by ten_dm";
             $listdanhmuc=pdo_query($sql);   
             include "danhmuc/listdm.php";
+            break;
+            case 'suadm':
+                if(isset($_GET['id'])&&($_GET['id']>0)){
+                $dm=loadone_danhmuc($_GET['id']);
+              }
+             include "danhmuc/updatedm.php";
             break;
             case 'updatedm':
             if(isset($_POST['capnhat']) && ($_POST['capnhat'])){

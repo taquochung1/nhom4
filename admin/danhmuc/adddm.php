@@ -52,7 +52,7 @@
                 >
               </li>
               <li>
-                <a href="index.php?act=listdm" class="has-arrow"
+                <a href="index.php?act=addsp" class="has-arrow"
                   ><span>Sản phẩm</span></a
                 >
               </li>

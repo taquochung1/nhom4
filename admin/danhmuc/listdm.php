@@ -310,12 +310,12 @@
             </div>  
             <nav id="left-sidebar-nav" class="sidebar-nav">
                 <ul id="main-menu" class="metismenu">
-                    <li class="active"><a href="index.html"><i class="icon-home"></i><span>Trang chủ</span></a></li>
+                    <li class="active"><a href="index.php"><i class="icon-home"></i><span>Trang chủ</span></a></li>
                     <li>
-                        <a href="danhmuc.html" class="has-arrow"><span>Danh mục</span></a>
+                        <a href="index.php?act=adddm" class="has-arrow"><span>Danh mục</span></a>
                     </li>
                     <li>
-                        <a href="sanpham.html" class="has-arrow"><span>Sản phẩm</span></a>
+                        <a href="index.php?act=addsp" class="has-arrow"><span>Sản phẩm</span></a>
                     </li>
                 </ul>
             </nav>     

@@ -88,12 +88,12 @@ if(is_array($dm)){
           <div>
             <input type="hidden" name="id" value="<?php if(isset($id)&&($id>0)) echo $id; ?>">
            <input type="submit" class="btn btn-success" name="capnhat" value="Cập nhật">
-          <a href="index.php?act=listdm"><input type="button" class="btn btn-success"  value="Danh sách">
+          <a href="index.php?act=listdm"><input type="button" class="btn btn-success" value="Danh sách">
           </a>
           <br>
            <?php
               if(isset($thongbao)&&($thongbao!="")) echo $thongbao;             
-          ?>
+           ?>
         </form>
       </div>
     </div>
