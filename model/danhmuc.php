@@ -1,24 +1,24 @@
 <?php
-function insert_danhmuc($tenloai){
-        $sql = "insert into danhmuc(ten_dm) values('$tenloai')";
+function insert_danhmuc($tenloai,$trangthai){
+        $sql = "insert into danh_muc(ten_dm,trang_thai) values('$tenloai','$trangthai')";
                 pdo_execute($sql);
 }
 function delete_danhmuc($id){
-    $sql="delete from danhmuc where id=".$id;
+    $sql="delete from danh_muc where id_dm=".$id;
                 pdo_execute($sql);
 }
 function loadall_danhmuc(){
-    $sql="SELECT * from danhmuc order by id desc";
+    $sql="SELECT * from danh_muc order by id_dm desc";
     $listdanhmuc=pdo_query($sql);
     return $listdanhmuc;
 }
 function loadone_danhmuc($id){
-    $sql='select * from danhmuc where id='.$id;
+    $sql='select * from danh_muc where id_dm='.$id;
                 $dm=pdo_query_one($sql);
                 return $dm;
 }
-function update_danhmuc($id,$tenloai){
-     $sql = "update danhmuc set name='".$tenloai."' where id=".$id;
+function update_danhmuc($id,$tenloai,$trangthai){
+     $sql = "update danh_muc set ten_dm='".$tenloai."',trang_thai='".$trangthai." where id_dm=".$id;
             pdo_execute($sql);
 }
 ?>

@@ -335,13 +335,23 @@
   </thead>
   <tbody>
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>
-        <input type="button" value="Xóa"> 
-        <input type="button" value="Sửa">
-    </td>
+      <?php foreach ($listdanhmuc as $danhmuc){
+                extract($danhmuc);
+                $suadm="index.php?act=suadm&id=".$id_dm;
+                $xoadm="index.php?act=xoadm&id=".$id_dm;
+                
+                echo'<tr>
+                
+                <td>'.$id_dm.'</td>
+                <td>'.$ten_dm.'</td>
+                <td>'.$trang_thai.'</td>
+                <td>
+                  <a href="'.$suadm.'"> <input type="button" value="Sửa"></a>
+                 <a href="'.$xoadm.'"> <input  type="button" value="Xóa"></a>
+                </td>
+                </tr>';
+              } ?>
+    
     </tr>         
       </div>
 </table>

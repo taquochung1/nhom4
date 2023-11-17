@@ -47,12 +47,12 @@
                 >
               </li>
               <li>
-                <a href="danhmuc.html" class="has-arrow"
+                <a href="index.php?act=adddm" class="has-arrow"
                   ><span>Danh mục</span></a
                 >
               </li>
               <li>
-                <a href="sanpham.html" class="has-arrow"
+                <a href="index.php?act=listdm" class="has-arrow"
                   ><span>Sản phẩm</span></a
                 >
               </li>
@@ -69,21 +69,25 @@
             <input type="text" name="maloai" disabled>
           </div>
           <div class="form-group">
-            <label for="Tên loại">Tên loại</label>
+            <label for="Tên loại" >Tên loại</label>
             <input type="text" name="tenloai">
           </div>
+          <div class="form-group">
+            <label for="Trạng Thái">Trạng Thái</label>
+            <select name="trangthai" name="trangthai">
+                <option value="Đang hoạt động">Đang hoạt động</option>
+                <option value="Nghỉ bán">Nghỉ bán</option> 
+                <option value="Sản phẩm hot">Sản phẩm hot</option> 
+            </select>
+          </div>
           <div>
-          <a href="index.php?act=adddm">   
-          <button class="btn btn-success" name="themmoi">Thêm loại hàng</button> 
+           <input type="submit" class="btn btn-success" name="themmoi" value="Thêm mới">
+          <a href="index.php?act=listdm"><input type="button" class="btn btn-success"  value="Danh sách">
           </a>
-          <a href="index.php?act=listdm">
-          <button class="btn btn-success">Danh sách loại hàng</button>
-          </a>
-             
+          <br>
           <?php
-                            if(isset($thongbao)&&($thongbao!="")) echo $thongbao; 
-                                      
-                        ?>
+              if(isset($thongbao)&&($thongbao!="")) echo $thongbao;             
+          ?>
         </form>
       </div>
     </div>
