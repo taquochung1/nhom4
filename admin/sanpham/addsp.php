@@ -64,21 +64,33 @@
       <div id="main-content">
         <h1>Thêm sản phẩm</h1>
         <form action="index.php?act=addsp" method="post" enctype="multipart/form-data">
-          <div class="form-group">
-            <label for="Mã sản phẩm">Mã sản phẩm</label>
-            <input type="text" name="ma" disabled>
-          </div>
+        <div class="form-group">
+                    Danh mục <br>
+                    <select name="iddm" id="">
+                        <?php
+                        foreach($listdanhmuc as $danhmuc){
+                            extract($danhmuc);
+                            echo '<option value="'.$id_dm.'">'.$ten_dm.'</option>';
+                        }
+                        ?>
+                        
+                    </select>
+        </div>
           <div class="form-group">
             <label for="Hình ảnh" >Hình ảnh sản phẩm</label>
             <input type="file" name="hinhanh">
           </div>
           <div class="form-group">
             <label for="Tên sản phẩm" >Tên sản phẩm</label>
-            <input type="text" name="tensp">
+            <input type="text" name="ten_sp">
           </div>
           <div class="form-group">
             <label for="Tên loại" >Giá sản phẩm</label>
-            <input type="text" name="giasp">
+            <input type="text" name="gia">
+          </div>
+          <div class="form-group">
+            <label for="Mô tả">Mô tả</label>
+            <textarea name="mota" id="" cols="30" rows="10"></textarea>
           </div>
           <input type="submit" class="btn btn-success" name="themmoi" value="Thêm mới">
           <a href="index.php?act=listsp"><input type="button" class="btn btn-success"  value="Danh sách">
