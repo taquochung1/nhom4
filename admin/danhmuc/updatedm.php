@@ -67,8 +67,8 @@ if(is_array($dm)){
       </div>
 
       <div id="main-content">
-        <h1>Thêm loại hàng</h1>
-        <form action="index.php?act=adddm" method="post" enctype="multipart/form-data">
+        <h1>Sửa loại hàng</h1>
+        <form action="index.php?act=updatedm" method="post" enctype="multipart/form-data">
           <div class="form-group">
             <label for="Mã loại">Mã loại</label>
             <input type="text" name="maloai" disabled>
