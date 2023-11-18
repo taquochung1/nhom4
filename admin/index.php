@@ -90,6 +90,34 @@ if(isset($_GET['act'])){
             $listsanpham=loadall_sanpham("",0);
             include "sanpham/listsp.php";
             break;
+            
+            case 'suasp':
+                if(isset($_GET['id'])&&($_GET['id']>0)){
+
+                    $sanpham=loadone_sanpham($_GET['id']);
+                }
+                $listdanhmuc=loadall_danhmuc();
+                include "sanpham/updatesp.php";
+                break;
+
+            case 'updatesp':
+                if(isset($_POST['capnhat'])&&($_POST['capnhat'])){
+                    $id=$_POST['id'];   
+                    $iddm=$_POST['id_dm'];
+                    $tensp=$_POST['ten_sp'];
+                    $giasp=$_POST['gia'];
+                    $mota=$_POST['mo_ta'];
+                    $hinh=$_FILES['hinh']['name'];
+                    $target_dir = "../admin/upload/";
+                $target_file = $target_dir . basename($_FILES["hinh"]["name"]);
+                if (move_uploaded_file($_FILES["hinh"]["tmp_name"], $target_file)) {
+                   // echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
+                  } else {
+                   // echo "Sorry, there was an error uploading your file.";
+                  }
+                    update_sanpham($id,$iddm,$tensp,$giasp,$mota,$hinh);
+                    $thongbao="Cập nhậtthành công";
+                }
                 
         default:
             include "home.php";

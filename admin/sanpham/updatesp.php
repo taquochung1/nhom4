@@ -75,7 +75,20 @@ $hinhpath="../admin/upload/".$img;
       <div id="main-content">
         <h1>Cập nhật sản phẩm</h1>
         <form action="index.php?act=updatesp" method="post" enctype="multipart/form-data">
-          <div class="form-group">
+        <div class="form-group">
+        <select name="iddm" >
+                            <option value="0" selected>Tất cả</option>
+                               <?php foreach($listdanhmuc as $danh_muc){
+                                if($iddm==$danh_muc['id_sp'])
+                                 echo '<option value="'.$danh_muc['id_sp'].'"  selected>'.$danh_muc['ten_sp'].'</option>';
+                                 else 
+                                  echo '<option value="'.$danh_muc['id_sp'].'">'.$danh_muc['ten_sp'].'</option>';
+                                }
+                                 ?>
+                                       
+                        </select>
+          </div>
+        <div class="form-group">
             <label for="Mã loại">Mã loại</label>
             <input type="text" name="maloai" disabled>
           </div>
@@ -89,12 +102,12 @@ $hinhpath="../admin/upload/".$img;
           </div>
           <div class="form-group">
             <label for="Hình ảnh sản phẩm">Hình ảnh sản phẩm</label>
-            <input type="file" name="hinhanh"> 
-            <?=$hinhanh?>
+            <input type="file" name="hinh"> 
+            <?=$hinh?>
           </div>
           <div class="form-group">
             <label for="Mô tả">Mô tả sản phẩm</label>
-            <textarea name="mota" id="" cols="30" rows="10"><?=$mota?></textarea> 
+            <textarea name="mota"  cols="30" rows="10"><?=$mo_ta?></textarea> 
           </div>
           <div>
             <input type="hidden" name="id" value="<?=$id_sp ?>">
