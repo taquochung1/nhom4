@@ -66,7 +66,7 @@
         <form action="index.php?act=addsp" method="post" enctype="multipart/form-data">
         <div class="form-group">
                     Danh mục <br>
-                    <select name="iddm" id="">
+                    <select name="iddm" >
                         <?php
                         foreach($listdanhmuc as $danhmuc){
                             extract($danhmuc);
@@ -78,7 +78,7 @@
         </div>
           <div class="form-group">
             <label for="Hình ảnh" >Hình ảnh sản phẩm</label>
-            <input type="file" name="hinhanh">
+            <input type="file" name="hinh">
           </div>
           <div class="form-group">
             <label for="Tên sản phẩm" >Tên sản phẩm</label>

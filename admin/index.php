@@ -49,22 +49,26 @@ if(isset($_GET['act'])){
 
             /*CRUD sản phẩm */
             case 'addsp':
+                // KIểm tra xem người dùng có click vào nut add hay k
                 if(isset($_POST['themmoi'])&&($_POST['themmoi'])){
                     $iddm=$_POST['iddm'];
-                    $tensp=$_POST['tensp'];
-                    $giasp=$_POST['gia'];
+                    $ten_sp=$_POST['ten_sp'];
+                    $gia=$_POST['gia'];
                     $mota=$_POST['mota'];
-                    $hinh = $_FILES['hinhanh']['name'];
-                    $target_dir = "uploads/";
-                    $target_file = $target_dir . basename($_FILES["hinhanh"]["name"]);
-                    if (move_uploaded_file($_FILES["hinhanh"]["tmp_name"], $target_file)) {
-                        // echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
+                    $hinh=$_FILES['hinh']['name'];
+                    $target_dir = "../admin/upload/";
+                    $target_file = $target_dir . basename($_FILES["hinh"]["name"]);
+                    if (move_uploaded_file($_FILES["hinh"]["tmp_name"], $target_file)) {
+                       // echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
                       } else {
-                        // echo "Sorry, there was an error uploading your file.";
+                       // echo "Sorry, there was an error uploading your file.";
                       }
-                      insert_sanpham($ten_sp,$gia,$hinh,$mota,$iddm);
+
+                    insert_sanpham($ten_sp,$gia,$hinh,$mota,$iddm);
+                    $thongbao="Thêm thành công";
                 }
                 $listdanhmuc = loadall_danhmuc();
+                $listsanpham=loadall_sanpham($kyw,$iddm);
                 include "sanpham/addsp.php";
                 break;
         default:
