@@ -38,7 +38,7 @@
           <nav id="left-sidebar-nav" class="sidebar-nav">
             <ul id="main-menu" class="metismenu">
               <li class="active">
-                <a href="index.html"
+                <a href="index.php"
                   ><i class="icon-home"></i><span>Trang chủ</span></a
                 >
               </li>

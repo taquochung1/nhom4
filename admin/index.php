@@ -68,9 +68,29 @@ if(isset($_GET['act'])){
                     $thongbao="Thêm thành công";
                 }
                 $listdanhmuc = loadall_danhmuc();
-                $listsanpham=loadall_sanpham($kyw,$iddm);
                 include "sanpham/addsp.php";
                 break;
+                 case 'listsp':
+                if(isset($_POST['listok']) && ($_POST['listok'])){
+                $kyw=$_POST['kyw'];
+                $iddm=$_POST['iddm'];
+               } else{
+                $kyw='';
+                $iddm=0;
+                }
+            $listdanhmuc=loadall_danhmuc();
+            $listsanpham=loadall_sanpham($kyw,$iddm);
+            include "sanpham/listsp.php";
+            break;
+            case 'xoasp':
+                if(isset($_GET['id'])&&($_GET['id']>0)){
+                delete_sanpham($_GET['id']);
+            }
+            $sql="select * from san_pham order by ten_sp";
+            $listsanpham=loadall_sanpham("",0);
+            include "sanpham/listsp.php";
+            break;
+                
         default:
             include "home.php";
             break;

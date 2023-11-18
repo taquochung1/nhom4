@@ -77,16 +77,16 @@
                     </select>
         </div>
           <div class="form-group">
-            <label for="Hình ảnh" >Hình ảnh sản phẩm</label>
-            <input type="file" name="hinh">
-          </div>
-          <div class="form-group">
             <label for="Tên sản phẩm" >Tên sản phẩm</label>
             <input type="text" name="ten_sp">
           </div>
           <div class="form-group">
             <label for="Tên loại" >Giá sản phẩm</label>
             <input type="text" name="gia">
+          </div>
+          <div class="form-group">
+            <label for="Hình ảnh" >Hình ảnh sản phẩm</label>
+            <input type="file" name="hinh">
           </div>
           <div class="form-group">
             <label for="Mô tả">Mô tả</label>
