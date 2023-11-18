@@ -1,7 +1,4 @@
 
-  <body class="theme-orange">
-    <!-- Overlay For Sidebars -->
-    <div class="overlay"></div>
 
     <div id="wrapper">
       <div id="left-sidebar" class="sidebar">
@@ -21,24 +18,7 @@
           </button>
         </div>
         <div class="sidebar-scroll">
-          <div class="user-account">
-            <div class="user_div">
-              <img
-                src="../assets/images/user.png"
-                class="user-photo"
-                alt="User Profile Picture"
-              />
-            </div>
-            <div class="dropdown">
-              <span>Welcome</span>
-              <a
-                href="javascript:void(0);"
-                class="dropdown-toggle user-name"
-                data-toggle="dropdown"
-                ><strong>Christy Wert</strong></a
-              >
-            </div>
-          </div>
+         
           <nav id="left-sidebar-nav" class="sidebar-nav">
             <ul id="main-menu" class="metismenu">
               <li class="active">
@@ -56,10 +36,25 @@
                   ><span>Sản phẩm</span></a
                 >
               </li>
+              <li>
+                <a href="index.php?act=addsp" class="has-arrow"
+                  ><span>Mã giảm giá</span></a
+                >
+              </li>
+              <li>
+                <a href="index.php?act=addsp" class="has-arrow"
+                  ><span>Chi tiết</span></a
+                >
+              </li>
             </ul>
           </nav>
         </div>
       </div>
+
+      <div id="main-content">
+      
+      </div>
+    </div>
 
       <div id="main-content">
         <h1>Thêm loại hàng</h1>

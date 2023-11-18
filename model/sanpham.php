@@ -36,7 +36,7 @@ function loadone_sanpham($id){
 }
 function load_ten_dm($iddm){
     if($iddm>0){
-    $sql="select * from danh_muc where id=".$iddm;
+    $sql="select * from danh_muc where id_dm=".$iddm;
     $dm=pdo_query_one($sql);
     extract($dm);
     return $name;
@@ -46,15 +46,15 @@ function load_ten_dm($iddm){
    
 }
 function loadone_sanpham_cungloai($id,$iddm){
-    $sql="select * from san_pham where iddm=".$iddm." AND id <>".$id;
+    $sql="select * from san_pham where id_dm=".$iddm." AND id <>".$id;
     $listsanpham=pdo_query($sql);
     return $listsanpham;
 }
-function  update_sanpham($id,$iddm,$tensp,$giasp,$mota,$hinh){
+function  update_sanpham($id,$iddm,$ten_sp,$gia,$mo_ta,$hinh){
     if($hinh!="")
-    $sql = "update san_pham set iddm='".$iddm."', name='".$tensp."',price='".$giasp."',mota='".$mota."',img='".$hinh."' where id=".$id;
+    $sql = "update san_pham set id_dm='".$iddm."', ten_sp='".$ten_sp."',gia='".$gia."',mo_ta='".$mo_ta."',img='".$hinh."' where id_sp=".$id;
     else
-    $sql = "update san_pham set iddm='".$iddm."', name='".$tensp."',price='".$giasp."',mota='".$mota."' where id=".$id;
+    $sql = "update san_pham set id_dm='".$iddm."', ten_sp='".$ten_sp."',gia='".$gia."',mo_ta='".$mo_ta."' where id_sp=".$id;
     
     pdo_execute($sql);
 }

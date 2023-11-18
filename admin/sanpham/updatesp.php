@@ -10,11 +10,7 @@ $hinhpath="../admin/upload/".$img;
                 }
 ?>
   
-  <body class="theme-orange">
-    <!-- Overlay For Sidebars -->
-    <div class="overlay"></div>
-
-    <div id="wrapper">
+  <div id="wrapper">
       <div id="left-sidebar" class="sidebar">
         <div class="navbar-brand">
           <a href="index.html"
@@ -32,24 +28,7 @@ $hinhpath="../admin/upload/".$img;
           </button>
         </div>
         <div class="sidebar-scroll">
-          <div class="user-account">
-            <div class="user_div">
-              <img
-                src="../assets/images/user.png"
-                class="user-photo"
-                alt="User Profile Picture"
-              />
-            </div>
-            <div class="dropdown">
-              <span>Welcome</span>
-              <a
-                href="javascript:void(0);"
-                class="dropdown-toggle user-name"
-                data-toggle="dropdown"
-                ><strong>Christy Wert</strong></a
-              >
-            </div>
-          </div>
+         
           <nav id="left-sidebar-nav" class="sidebar-nav">
             <ul id="main-menu" class="metismenu">
               <li class="active">
@@ -63,8 +42,18 @@ $hinhpath="../admin/upload/".$img;
                 >
               </li>
               <li>
-                <a href="index.php?act=listdm" class="has-arrow"
+                <a href="index.php?act=addsp" class="has-arrow"
                   ><span>Sản phẩm</span></a
+                >
+              </li>
+              <li>
+                <a href="index.php?act=addsp" class="has-arrow"
+                  ><span>Mã giảm giá</span></a
+                >
+              </li>
+              <li>
+                <a href="index.php?act=addsp" class="has-arrow"
+                  ><span>Chi tiết</span></a
                 >
               </li>
             </ul>
@@ -73,28 +62,43 @@ $hinhpath="../admin/upload/".$img;
       </div>
 
       <div id="main-content">
+      
+      </div>
+    </div>
+
+      <div id="main-content">
         <h1>Cập nhật sản phẩm</h1>
         <form action="index.php?act=updatesp" method="post" enctype="multipart/form-data">
+          <select name="iddm" >
+                <option value="0" selected>Tất cả</option>
+                <?php foreach($listdanhmuc as $danhmuc){
+                  if($iddm==$danhmuc['id_dm'])
+                   echo '<option value="'.$danhmuc['id_dm'].'"  selected>'.$danhmuc['ten_dm'].'</option>';
+                   else 
+                    echo '<option value="'.$danhmuc['id_dm'].'">'.$danhmuc['ten_dm'].'</option>';
+                  }
+                   ?>
+              </select>
           <div class="form-group">
             <label for="Mã loại">Mã loại</label>
             <input type="text" name="maloai" disabled>
           </div>
           <div class="form-group">
             <label for="Tên loại">Tên sản phẩm</label>
-            <input type="text" name="tenloai"value="<?=$ten_sp?>">
+            <input type="text" name="ten_sp" value="<?=$ten_sp?>">
           </div>
           <div class="form-group">
             <label for="Giá sản phẩm">Giá sản phẩm</label>
-            <input type="text" name="giasp" value="<?=$gia?>"> 
+            <input type="text" name="gia" value="<?=$gia?>"> 
           </div>
           <div class="form-group">
             <label for="Hình ảnh sản phẩm">Hình ảnh sản phẩm</label>
-            <input type="file" name="hinhanh"> 
-            <?=$hinhanh?>
+            <input type="file" name="hinh"> 
+            <?=$hinh?>
           </div>
           <div class="form-group">
             <label for="Mô tả">Mô tả sản phẩm</label>
-            <textarea name="mota" id="" cols="30" rows="10"><?=$mota?></textarea> 
+            <textarea name="mo_ta" id="" cols="30" rows="10"><?=$mo_ta?></textarea> 
           </div>
           <div>
             <input type="hidden" name="id" value="<?=$id_sp ?>">
