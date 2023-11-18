@@ -35,12 +35,12 @@
                 >
               </li>
               <li>
-                <a href="index.php?act=addsp" class="has-arrow"
+                <a href="index.php?act=magg" class="has-arrow"
                   ><span>Mã giảm giá</span></a
                 >
               </li>
               <li>
-                <a href="index.php?act=addsp" class="has-arrow"
+                <a href="index.php?act=ctsp" class="has-arrow"
                   ><span>Chi tiết</span></a
                 >
               </li>
