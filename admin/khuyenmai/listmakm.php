@@ -1,4 +1,3 @@
-
 <div id="wrapper">
       <div id="left-sidebar" class="sidebar">
         <div class="navbar-brand">
@@ -37,7 +36,7 @@
               </li>
               <li>
                 <a href="index.php?act=addmakm" class="has-arrow"
-                  ><span>Mã giảm giá</span></a
+                  ><span>Mã Khuyến mại</span></a
                 >
               </li>
               <li>
@@ -54,42 +53,47 @@
       
       </div>
     </div>
-
-      <div id="main-content">
-        <h1>Thêm sản phẩm</h1>
-        <form action="index.php?act=addsp" method="post" enctype="multipart/form-data">
-        <div class="form-group">
-                    Danh mục <br>
-                    <select name="iddm" >
-                        <?php
-                        foreach($listdanhmuc as $danhmuc){
-                            extract($danhmuc);
-                            echo '<option value="'.$id_dm.'">'.$ten_dm.'</option>';
-                        }
-                        ?>
-                        
-                    </select>
-        </div>
-          <div class="form-group">
-            <label for="Tên sản phẩm" >Tên sản phẩm</label>
-            <input type="text" name="ten_sp">
-          </div>
-          <div class="form-group">
-            <label for="Tên loại" >Giá sản phẩm</label>
-            <input type="text" name="gia">
-          </div>
-          <div class="form-group">
-            <label for="Hình ảnh" >Hình ảnh sản phẩm</label>
-            <input type="file" name="hinh">
-          </div>
-          <div class="form-group">
-            <label for="Mô tả">Mô tả</label>
-            <textarea name="mota" id="" cols="30" rows="10"></textarea>
-          </div>
-          <input type="submit" class="btn btn-success" name="themmoi" value="Thêm mới">
-          <a href="index.php?act=listsp"><input type="button" class="btn btn-success"  value="Danh sách">
-          </a>
-          <br>
-        
+    <div id="main-content">
+    <table class="table">
+  <thead class="thead-dark">
+  <tr>
+                    <td>Mã khuyến mại</td>
+                    <td>Tên khuyến mại</td>
+                    <td>chiết khấu</td>
+                    <td>ngày áp dụng</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <?php
+       foreach ($listmakm as  $khuyenmai){
+                extract($khuyenmai);
+                $xoakm="index.php?act=xoakm&id=".$id_khuyen_mai;
+                $suakm="index.php?act=suakm&id=".$id_khuyen_mai;
+                echo'<tr>
+                
+                <td>'.$id_khuyen_mai.'</td>
+                <td>'.$ten_khuyen_mai.'</td>
+                <td>'.$chiet_khau.'</td>
+                <td>'.$ngay_ap_dung.'</td>
+                <td>
+                  <a href="'.$suakm.'"> <input type="button" value="Sửa"></a>
+                 <a href="'.$xoakm.'"> <input  type="button" value="Xóa"></a>
+                </td>
+                </tr>';
+              } 
+              ?>
+    
+    </tr>         
       </div>
+</table>
+       <div class="another-button">
+                <input class="btn btn-success" type="button" value="Xóa các mục đã chọn" >
+                <a href="index.php?act=addmakm"><input class="btn btn-success" type="button" value="Thêm loại hàng"></a>
+         </div>
     </div>
+    
+</div>
+         

@@ -72,7 +72,7 @@ $hinhpath="../admin/upload/".$img;
           <select name="iddm" >
                 <option value="0" selected>Tất cả</option>
                 <?php foreach($listdanhmuc as $danhmuc){
-                  if($iddm==$danhmuc['id_dm'])
+                  if($id_dm==$danhmuc['id_dm'])
                    echo '<option value="'.$danhmuc['id_dm'].'"  selected>'.$danhmuc['ten_dm'].'</option>';
                    else 
                     echo '<option value="'.$danhmuc['id_dm'].'">'.$danhmuc['ten_dm'].'</option>';

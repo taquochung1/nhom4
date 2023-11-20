@@ -36,8 +36,8 @@
                 >
               </li>
               <li>
-                <a href="index.php?act=magg" class="has-arrow"
-                  ><span>Mã giảm giá</span></a
+                <a href="index.php?act=addmakm" class="has-arrow"
+                  ><span>Mã khuyến mại</span></a
                 >
               </li>
               <li>

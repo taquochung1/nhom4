@@ -2,6 +2,8 @@
 include "../model/pdo.php";
 include "../model/danhmuc.php";
 include "../model/sanpham.php";
+include "../model/khuyen-mai.php";
+include "../model/khuyenmai.php";
 include "header.php";
 if (isset($_GET['act'])) {
     $act = $_GET['act'];
@@ -115,10 +117,40 @@ if (isset($_GET['act'])) {
                 update_sanpham($id, $iddm, $ten_sp, $gia, $mo_ta, $hinh);
                 $thongbao = "Cập nhật thành công";
             }
+
+        case 'addmakm':
+            if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
+                $ten_khuyen_mai = $_POST['ten_khuyen_mai'];
+                $chiet_khau = $_POST['chiet_khau'];
+                $ngay_ap_dung = $_POST['ngay_ap_dung'];
+                insert_km($ten_khuyen_mai, $chiet_khau, $ngay_ap_dung);
+                header('Location: index.php?act=listmakm');
+            }
+            include 'khuyenmai/addmakm.php';
+            break;
+        case 'listmakm':
+            $listmakm = loadall_km();
+            include "khuyenmai/listmakm.php";
+            break;
+
+        case 'xoamakm':
+            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                delete_khuyenmai($_GET['id']);
+            }
+            $sql = "select * from khuyen_mai order by ten_khuyen_mai";
+            $listmakm = pdo_query($sql);
+            include "khuyenmai/listmakm.php";
+            break;
+
+
+            $listdanhmuc = loadall_km();
             $listdanhmuc = loadall_danhmuc();
             $listsanpham = loadall_sanpham();
             include "sanpham/listsp.php";
             break;
+
+
+
 
         default:
             include "home.php";
