@@ -4,6 +4,7 @@ include "../model/danhmuc.php";
 include "../model/sanpham.php";
 include "../model/khuyen-mai.php";
 include "../model/khuyenmai.php";
+include "../model/taikhoan.php";
 include "header.php";
 if (isset($_GET['act'])) {
     $act = $_GET['act'];
@@ -117,6 +118,8 @@ if (isset($_GET['act'])) {
                 update_sanpham($id, $iddm, $ten_sp, $gia, $mo_ta, $hinh);
                 $thongbao = "Cập nhật thành công";
             }
+            include "sanpham/updatesp.php";
+            break;
 
         case 'addmakm':
             if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
@@ -142,12 +145,54 @@ if (isset($_GET['act'])) {
             include "khuyenmai/listmakm.php";
             break;
 
+        case 'addtk':
+            if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
+                $tendangnhap = $_POST['tendangnhap'];
+                $matkhau = $_POST['matkhau'];
+                insert_taikhoan($tendangnhap, $matkhau);
+                $thongbao = "thêm thành công";
+            }
+            include "taikhoan/addtk.php";
+            break;
+        case 'listtk':
+            $listtaikhoan = loadall_taikhoan();
+            include "taikhoan/listtk.php";
+            break;
+        case 'xoatk':
+            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                delete_taikhoan($_GET['id']);
+            }
+            $sql = "select * from tai_khoan order by ten_dang_nhap";
+            $listtaikhoan = pdo_query($sql);
+            include "taikhoan/listtk.php";
+            break;
+        case 'suatk':
+            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                $taikhoan = loadone_taikhoan($_GET['id']);
+            }
+            $listdanhmuc = loadall_danhmuc();
+            include "sanpham/updatesp.php";
+            break;
+        case 'updatetk':
+            if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
+                $tenloai = $_POST['tenloai'];
+                $tendangnhap = $_POST['tendangnhap'];
+                $matkhau = $_POST['matkhau'];
+                $id = $_POST['id'];
+                update_danhmuc($id, $tendangnhap, $matkhau);
+                $thongbao = "Cập nhật thành công";
+            }
 
-            $listdanhmuc = loadall_km();
+            $listtk = loadall_taikhoan();
+            include "taikhoan/listtk.php";
+            break;
+
+
+            $listtk = loadall_taikhoan();
+            $listkm = loadall_km();
             $listdanhmuc = loadall_danhmuc();
             $listsanpham = loadall_sanpham();
-            include "sanpham/listsp.php";
-            break;
+
 
 
 
