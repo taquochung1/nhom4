@@ -5,6 +5,7 @@ include "../model/sanpham.php";
 include "../model/khuyen-mai.php";
 include "../model/khuyenmai.php";
 include "../model/taikhoan.php";
+include "../model/binhluan.php";
 include "header.php";
 if (isset($_GET['act'])) {
     $act = $_GET['act'];
@@ -186,6 +187,12 @@ if (isset($_GET['act'])) {
             $listtk = loadall_taikhoan();
             include "taikhoan/listtk.php";
             break;
+
+        case 'dsbl':
+            $listbinhluan = loadall_binhluan(0);
+            include "binhluan/list.php";
+            break;
+
 
 
             $listtk = loadall_taikhoan();

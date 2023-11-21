@@ -29,6 +29,9 @@
             <li>
               <a href="index.php?act=addtk" class="has-arrow"><span>Tài Khoản </span></a>
             </li>
+            <li>
+              <a href="index.php?act=addbl" class="has-arrow"><span>Bình Luận </span></a>
+            </li>
           </ul>
         </nav>
       </div>
