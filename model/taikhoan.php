@@ -15,11 +15,10 @@ function loadall_taikhoan()
     $listtaikhoan = pdo_query($sql);
     return $listtaikhoan;
 }
-function loadone_taikhoan($id)
-{
-    $sql = 'select * from tai_khoan where id_dang_nhap=' . $id;
-    $tk = pdo_query_one($sql);
-    return $tk;
+function loadone_taikhoan($id){
+    $sql="select * from tai_khoan where id_dang_nhap=".$id;
+    $kt=pdo_query_one($sql);
+    return $kt;
 }
 function update_taikhoan($id, $ten_dang_nhap, $mat_khau)
 {

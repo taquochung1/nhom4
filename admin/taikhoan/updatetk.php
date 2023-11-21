@@ -21,7 +21,7 @@ if(is_array($tk)){
                     </div>
                     <div class="row mb10">
                         Mật khẩu <br>
-                        <input type="text" name="matkhau" value="<?php if(isset($mat_khau)&&($mat_khau!="")) echo $mat_khau ; ?>">
+                        <input type="text" name="matkhau" value="<?php if(isset($mat_khau)&&($mat_khau!="")) echo $mat_khau  ; ?>">
                     </div>
                     <div class="row mb10">
                         <input type="hidden" name="id_dang_nhap" value="<?php if(isset($id_dang_nhap)&&($id_dang_nhap>0)) echo $id_dang_nhap ; ?>">
