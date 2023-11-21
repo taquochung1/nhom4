@@ -12,11 +12,11 @@ function loadall_sanpham_home(){
     $listsanpham=pdo_query($sql);
     return $listsanpham;
 }
-// function loadall_sanpham_top10(){
-//     $sql="SELECT * from san_pham where 1 order by luotxem desc limit 0,10";
-//     $listsanpham=pdo_query($sql);
-//     return $listsanpham;
-// }
+function loadall_sanpham_top10(){
+    $sql="SELECT * from san_pham where 1 order by luotxem desc limit 0,10";
+    $listsanpham=pdo_query($sql);
+    return $listsanpham;
+}
 function loadall_sanpham($kyw="",$iddm=0){
     $sql="SELECT * from san_pham where 1";
     if($kyw!=""){
@@ -31,15 +31,15 @@ function loadall_sanpham($kyw="",$iddm=0){
 }
 function loadone_sanpham($id){
     $sql="select * from san_pham where id_sp=".$id;
-    $sp=pdo_query_one($sql);
-    return $sp;
+    $sanpham=pdo_query_one($sql);
+    return $sanpham;
 }
 function load_ten_dm($iddm){
     if($iddm>0){
     $sql="select * from danh_muc where id_dm=".$iddm;
     $dm=pdo_query_one($sql);
     extract($dm);
-    return $name;
+    return $ten_sp;
     } else {
         return "";
     }
