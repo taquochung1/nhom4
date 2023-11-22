@@ -31,16 +31,16 @@
                 <ul class="nav">
                   <li class="dropdown">
                     <a
-                      href="index.php"
+                      href="home.php"
                       class="dropdown-toggle"
                       data-toggle="dropdown"
                       >Trang chủ</a
                     >
                   </li>
                   <li class="dropdown">
-                    <a href="shop_02.php">Sản phẩm</a>
+                    <a href="index.php?act=sanpham">Sản phẩm</a>
                   </li>
-                  <li><a href="about-us_01.php">Giới thiệu</a></li>
+                  <li><a href="index.php?act=gioithieu">Giới thiệu</a></li>
 
                   <!-- Two Link Option -->
                   <!-- MEGA MENU -->
@@ -155,7 +155,7 @@
                       </div>
                     </div>
                   </li>
-                  <li><a href="contact.php"> Liên hệ</a></li>
+                  <li><a href="index.php?act=lienhe"> Liên hệ</a></li>
                 </ul>
               </div>
 

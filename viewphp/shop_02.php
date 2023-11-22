@@ -69,8 +69,8 @@
           <div class="container">
             <!-- Logo -->
             <div class="logo">
-              <a href="index.html"
-                ><img class="img-responsive" src="images/logo.png" alt=""
+              <a href="index.php"
+                ><img class="img-responsive" src="viewphp/assetslayout/images/logo.png" alt=""
               /></a>
             </div>
             <nav class="navbar ownmenu">
@@ -92,16 +92,16 @@
                 <ul class="nav">
                   <li class="dropdown">
                     <a
-                      href="index.html"
+                      href="index.php"
                       class="dropdown-toggle"
                       data-toggle="dropdown"
                       >Trang chủ</a
                     >
                   </li>
                   <li class="dropdown">
-                    <a href="shop_02.html">Sản phẩm</a>
+                    <a href="index.php?act=sanpham">Sản phẩm</a>
                   </li>
-                  <li><a href="about-us_01.html">Giới thiệu</a></li>
+                  <li><a href="index.php?act=gioithieu">Giới thiệu</a></li>
 
                   <!-- Two Link Option -->
                   <!-- MEGA MENU -->
@@ -123,7 +123,7 @@
                                     <a href="#">
                                       <img
                                         class="media-object img-responsive"
-                                        src="images/cart-img-1.jpg"
+                                        src="viewphp/assetslayout/images/cart-img-1.jpg"
                                         alt="..."
                                       />
                                     </a>
@@ -147,7 +147,7 @@
                                     <a href="#">
                                       <img
                                         class="media-object img-responsive"
-                                        src="images/cart-img-2.jpg"
+                                        src="viewphp/assetslayout/images/cart-img-2.jpg"
                                         alt="..."
                                       />
                                     </a>
@@ -171,7 +171,7 @@
                                     <a href="#">
                                       <img
                                         class="media-object img-responsive"
-                                        src="images/cart-img-3.jpg"
+                                        src="viewphp/assetslayout/images/cart-img-3.jpg"
                                         alt="..."
                                       />
                                     </a>
@@ -200,7 +200,7 @@
                           </h5>
                           <img
                             class="nav-img"
-                            src="images/nav-img.png"
+                            src="viewphp/assetslayout/images/nav-img.png"
                             alt=""
                           />
                           <p>
@@ -216,7 +216,7 @@
                       </div>
                     </div>
                   </li>
-                  <li><a href="contact.html"> Liên hệ</a></li>
+                  <li><a href="index.php?act=lienhe"> Liên hệ</a></li>
                 </ul>
               </div>
 
@@ -236,9 +236,9 @@
                       <li>
                         <h6>HELLO! Jhon Smith</h6>
                       </li>
-                      <li><a href="shopping-cart.html">MY CART</a></li>
+                      <li><a href="shopping-cart.php">MY CART</a></li>
                       <li><a href="#">ACCOUNT INFO</a></li>
-                      <li><a href="#">LOG OUT</a></li>
+                      <li><a href="index.php?act=dangky">Login</a></li>
                     </ul>
                   </li>
 
@@ -260,7 +260,7 @@
                             <a href="#">
                               <img
                                 class="media-object img-responsive"
-                                src="images/cart-img-1.jpg"
+                                src="viewphp/assetslayout//cart-img-1.jpg"
                                 alt="..."
                               />
                             </a>
@@ -278,7 +278,7 @@
                             <a href="#">
                               <img
                                 class="media-object img-responsive"
-                                src="images/cart-img-2.jpg"
+                                src="viewphp/assetslayout/images/cart-img-2.jpg"
                                 alt="..."
                               />
                             </a>
@@ -296,12 +296,12 @@
                       <li class="margin-0">
                         <div class="row">
                           <div class="col-xs-6">
-                            <a href="shopping-cart.html" class="btn"
+                            <a href="shopping-cart.php" class="btn"
                               >VIEW CART</a
                             >
                           </div>
                           <div class="col-xs-6">
-                            <a href="checkout.html" class="btn">CHECK OUT</a>
+                            <a href="checkout.php" class="btn">CHECK OUT</a>
                           </div>
                         </div>
                       </li>
