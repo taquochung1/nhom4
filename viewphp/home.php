@@ -1,59 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <!-- Mirrored from demos.webicode.com/html/eco-shop-html/Single_Img_Demo/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 04 Nov 2023 14:37:55 GMT -->
-  <!-- Added by HTTrack --><meta
-    http-equiv="content-type"
-    content="text/html;charset=utf-8"
-  /><!-- /Added by HTTrack -->
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="" />
-    <meta name="author" content="M_Adnan" />
-    <title>ECOSHOP - Multipurpose eCommerce HTML5 Template</title>
-
-    <!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="rs-plugin/css/settings.css"
-      media="screen"
-    />
-
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
-
-    <!-- Custom CSS -->
-    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-    <link href="css/ionicons.min.css" rel="stylesheet" />
-    <link href="css/main.css" rel="stylesheet" />
-    <link href="css/style.css" rel="stylesheet" />
-    <link href="css/responsive.css" rel="stylesheet" />
-
-    <!-- JavaScripts -->
-    <script src="js/modernizr.js"></script>
-
-    <!-- Online Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900"
-      rel="stylesheet"
-      type="text/css"
-    />
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
+<body>
 
     <!-- Wrap -->
     <div id="wrap">
@@ -63,8 +8,8 @@
           <div class="container">
             <!-- Logo -->
             <div class="logo">
-              <a href="index.html"
-                ><img class="img-responsive" src="images/logo.png" alt=""
+              <a href="index.php"
+                ><img class="img-responsive" src="viewphp/assetslayout/images/logo.png" alt=""
               /></a>
             </div>
             <nav class="navbar ownmenu">
@@ -86,16 +31,16 @@
                 <ul class="nav">
                   <li class="dropdown">
                     <a
-                      href="index.html"
+                      href="index.php"
                       class="dropdown-toggle"
                       data-toggle="dropdown"
                       >Trang chủ</a
                     >
                   </li>
                   <li class="dropdown">
-                    <a href="shop_02.html">Sản phẩm</a>
+                    <a href="shop_02.php">Sản phẩm</a>
                   </li>
-                  <li><a href="about-us_01.html">Giới thiệu</a></li>
+                  <li><a href="about-us_01.php">Giới thiệu</a></li>
 
                   <!-- Two Link Option -->
                   <!-- MEGA MENU -->
@@ -117,7 +62,7 @@
                                     <a href="#">
                                       <img
                                         class="media-object img-responsive"
-                                        src="images/cart-img-1.jpg"
+                                        src="viewphp/assetslayout/images/cart-img-1.jpg"
                                         alt="..."
                                       />
                                     </a>
@@ -141,7 +86,7 @@
                                     <a href="#">
                                       <img
                                         class="media-object img-responsive"
-                                        src="images/cart-img-2.jpg"
+                                        src="viewphp/assetslayout/images/cart-img-2.jpg"
                                         alt="..."
                                       />
                                     </a>
@@ -165,7 +110,7 @@
                                     <a href="#">
                                       <img
                                         class="media-object img-responsive"
-                                        src="images/cart-img-3.jpg"
+                                        src="viewphp/assetslayout/images/cart-img-3.jpg"
                                         alt="..."
                                       />
                                     </a>
@@ -194,7 +139,7 @@
                           </h5>
                           <img
                             class="nav-img"
-                            src="images/nav-img.png"
+                            src="viewphp/assetslayout/images/nav-img.png"
                             alt=""
                           />
                           <p>
@@ -210,7 +155,7 @@
                       </div>
                     </div>
                   </li>
-                  <li><a href="contact.html"> Liên hệ</a></li>
+                  <li><a href="contact.php"> Liên hệ</a></li>
                 </ul>
               </div>
 
@@ -230,7 +175,7 @@
                       <li>
                         <h6>HELLO! Jhon Smith</h6>
                       </li>
-                      <li><a href="shopping-cart.html">MY CART</a></li>
+                      <li><a href="shopping-cart.php">MY CART</a></li>
                       <li><a href="#">ACCOUNT INFO</a></li>
                       <li><a href="index.php?act=dangky">Login</a></li>
                     </ul>
@@ -254,7 +199,7 @@
                             <a href="#">
                               <img
                                 class="media-object img-responsive"
-                                src="images/cart-img-1.jpg"
+                                src="viewphp/assetslayout//cart-img-1.jpg"
                                 alt="..."
                               />
                             </a>
@@ -272,7 +217,7 @@
                             <a href="#">
                               <img
                                 class="media-object img-responsive"
-                                src="images/cart-img-2.jpg"
+                                src="viewphp/assetslayout/images/cart-img-2.jpg"
                                 alt="..."
                               />
                             </a>
@@ -290,12 +235,12 @@
                       <li class="margin-0">
                         <div class="row">
                           <div class="col-xs-6">
-                            <a href="shopping-cart.html" class="btn"
+                            <a href="shopping-cart.php" class="btn"
                               >VIEW CART</a
                             >
                           </div>
                           <div class="col-xs-6">
-                            <a href="checkout.html" class="btn">CHECK OUT</a>
+                            <a href="checkout.php" class="btn">CHECK OUT</a>
                           </div>
                         </div>
                       </li>
@@ -344,7 +289,7 @@
               >
                 <!-- MAIN IMAGE -->
                 <img
-                  src="images/slide-bg-1.jpg"
+                  src="viewphp/assetslayout/images/slide-bg-1.jpg"
                   alt="slider"
                   data-bgposition="center center"
                   data-bgfit="cover"
@@ -481,7 +426,7 @@
               >
                 <!-- MAIN IMAGE -->
                 <img
-                  src="images/slide-bg-2.jpg"
+                  src="viewphp/assetslayout/images/slide-bg-2.jpg"
                   alt="slider"
                   data-bgposition="center center"
                   data-bgfit="cover"
@@ -632,13 +577,13 @@
             <!-- Item -->
             <div class="item">
               <!-- Images -->
-              <img class="img-1" src="images/item-img-1-1.jpg" alt="" />
+              <img class="img-1" src="viewphp/assetslayout/images/item-img-1-1.jpg" alt="" />
               <!-- Overlay  -->
               <div class="overlay">
                 <!-- Price -->
                 <span class="price"><small>$</small>299</span>
                 <div class="position-center-center">
-                  <a href="images/item-img-1-1.jpg" data-lighter
+                  <a href="viewphp/assetslayout/images/item-img-1-1.jpg" data-lighter
                     ><i class="icon-magnifier"></i
                   ></a>
                 </div>
@@ -653,13 +598,13 @@
             <!-- Item -->
             <div class="item">
               <!-- Images -->
-              <img class="img-1" src="images/item-img-1-2.jpg" alt="" />
+              <img class="img-1" src="viewphp/assetslayout/images/item-img-1-2.jpg" alt="" />
               <!-- Overlay  -->
               <div class="overlay">
                 <!-- Price -->
                 <span class="price"><small>$</small>299</span>
                 <div class="position-center-center">
-                  <a href="images/item-img-1-2.jpg" data-lighter
+                  <a href="viewphp/assetslayout/images/item-img-1-2.jpg" data-lighter
                     ><i class="icon-magnifier"></i
                   ></a>
                 </div>
@@ -674,13 +619,13 @@
             <!-- Item -->
             <div class="item">
               <!-- Images -->
-              <img class="img-1" src="images/item-img-1-3.jpg" alt="" />
+              <img class="img-1" src="viewphp/assetslayout/images/item-img-1-3.jpg" alt="" />
               <!-- Overlay  -->
               <div class="overlay">
                 <!-- Price -->
                 <span class="price"><small>$</small>299</span>
                 <div class="position-center-center">
-                  <a href="images/item-img-1-3.jpg" data-lighter
+                  <a href="viewphp/assetslayout/images/item-img-1-3.jpg" data-lighter
                     ><i class="icon-magnifier"></i
                   ></a>
                 </div>
@@ -695,13 +640,13 @@
             <!-- Item -->
             <div class="item">
               <!-- Images -->
-              <img class="img-1" src="images/item-img-1-4.jpg" alt="" />
+              <img class="img-1" src="viewphp/assetslayout/images/item-img-1-4.jpg" alt="" />
               <!-- Overlay  -->
               <div class="overlay">
                 <!-- Price -->
                 <span class="price"><small>$</small>299</span>
                 <div class="position-center-center">
-                  <a href="images/item-img-1-4.jpg" data-lighter
+                  <a href="viewphp/assetslayout/images/item-img-1-4.jpg" data-lighter
                     ><i class="icon-magnifier"></i
                   ></a>
                 </div>
@@ -716,13 +661,13 @@
             <!-- Item -->
             <div class="item">
               <!-- Images -->
-              <img class="img-1" src="images/item-img-1-5.jpg" alt="" />
+              <img class="img-1" src="viewphp/assetslayout/images/item-img-1-5.jpg" alt="" />
               <!-- Overlay  -->
               <div class="overlay">
                 <!-- Price -->
                 <span class="price"><small>$</small>299</span>
                 <div class="position-center-center">
-                  <a href="images/item-img-1-5.jpg" data-lighter
+                  <a href="viewphp/assetslayout/images/item-img-1-5.jpg" data-lighter
                     ><i class="icon-magnifier"></i
                   ></a>
                 </div>
@@ -737,13 +682,13 @@
             <!-- Item -->
             <div class="item">
               <!-- Images -->
-              <img class="img-1" src="images/item-img-1-6.jpg" alt="" />
+              <img class="img-1" src="viewphp/assetslayout/images/item-img-1-6.jpg" alt="" />
               <!-- Overlay  -->
               <div class="overlay">
                 <!-- Price -->
                 <span class="price"><small>$</small>299</span>
                 <div class="position-center-center">
-                  <a href="images/item-img-1-6.jpg" data-lighter
+                  <a href="viewphp/assetslayout/images/item-img-1-6.jpg" data-lighter
                     ><i class="icon-magnifier"></i
                   ></a>
                 </div>
@@ -758,13 +703,13 @@
             <!-- Item -->
             <div class="item">
               <!-- Images -->
-              <img class="img-1" src="images/item-img-1-7.jpg" alt="" />
+              <img class="img-1" src="viewphp/assetslayout/images/item-img-1-7.jpg" alt="" />
               <!-- Overlay  -->
               <div class="overlay">
                 <!-- Price -->
                 <span class="price"><small>$</small>299</span>
                 <div class="position-center-center">
-                  <a href="images/item-img-1-7.jpg" data-lighter
+                  <a href="viewphp/assetslayout/images/item-img-1-7.jpg" data-lighter
                     ><i class="icon-magnifier"></i
                   ></a>
                 </div>
@@ -779,13 +724,13 @@
             <!-- Item -->
             <div class="item">
               <!-- Images -->
-              <img class="img-1" src="images/item-img-1-8.jpg" alt="" />
+              <img class="img-1" src="viewphp/assetslayout/images/item-img-1-8.jpg" alt="" />
               <!-- Overlay  -->
               <div class="overlay">
                 <!-- Price -->
                 <span class="price"><small>$</small>299</span>
                 <div class="position-center-center">
-                  <a href="images/item-img-1-8.jpg" data-lighter
+                  <a href="viewphp/assetslayout/images/item-img-1-8.jpg" data-lighter
                     ><i class="icon-magnifier"></i
                   ></a>
                 </div>
@@ -813,12 +758,12 @@
               <div class="item">
                 <!-- Item img -->
                 <div class="item-img">
-                  <img class="img-1" src="images/product-1.jpg" alt="" />
+                  <img class="img-1" src="viewphp/assetslayout/images/product-1.jpg" alt="" />
                   <!-- Overlay -->
                   <div class="overlay">
                     <div class="position-center-center">
                       <div class="inn">
-                        <a href="images/product-1.jpg" data-lighter
+                        <a href="viewphp/assetslayout/images/product-1.jpg" data-lighter
                           ><i class="icon-magnifier"></i
                         ></a>
                         <a href="#."><i class="icon-basket"></i></a>
@@ -840,12 +785,12 @@
               <div class="item">
                 <!-- Item img -->
                 <div class="item-img">
-                  <img class="img-1" src="images/product-2.jpg" alt="" />
+                  <img class="img-1" src="viewphp/assetslayout/images/product-2.jpg" alt="" />
                   <!-- Overlay -->
                   <div class="overlay">
                     <div class="position-center-center">
                       <div class="inn">
-                        <a href="images/product-2.jpg" data-lighter
+                        <a href="viewphp/assetslayout/images/product-2.jpg" data-lighter
                           ><i class="icon-magnifier"></i
                         ></a>
                         <a href="#."><i class="icon-basket"></i></a>
@@ -867,12 +812,12 @@
               <div class="item">
                 <!-- Item img -->
                 <div class="item-img">
-                  <img class="img-1" src="images/product-3.jpg" alt="" />
+                  <img class="img-1" src="viewphp/assetslayout/images/product-3.jpg" alt="" />
                   <!-- Overlay -->
                   <div class="overlay">
                     <div class="position-center-center">
                       <div class="inn">
-                        <a href="images/product-3.jpg" data-lighter
+                        <a href="viewphp/assetslayout/images/product-3.jpg" data-lighter
                           ><i class="icon-magnifier"></i
                         ></a>
                         <a href="#."><i class="icon-basket"></i></a>
@@ -894,12 +839,12 @@
               <div class="item">
                 <!-- Item img -->
                 <div class="item-img">
-                  <img class="img-1" src="images/product-4.jpg" alt="" />
+                  <img class="img-1" src="viewphp/assetslayout/images/product-4.jpg" alt="" />
                   <!-- Overlay -->
                   <div class="overlay">
                     <div class="position-center-center">
                       <div class="inn">
-                        <a href="images/product-4.jpg" data-lighter
+                        <a href="viewphp/assetslayout/images/product-4.jpg" data-lighter
                           ><i class="icon-magnifier"></i
                         ></a>
                         <a href="#."><i class="icon-basket"></i></a>
@@ -921,79 +866,4 @@
         </section>
 
       <!--======= FOOTER =========-->
-      <footer>
-        <div class="container">
-          <!-- Location -->
-          <div class="col-md-3">
-            <div class="about-footer">
-              <img class="margin-bottom-30" src="images/logo-foot.png" alt="" />
-              <p>
-                <i class="icon-pointer"></i> Street No. 12, Newyork 12, <br />
-                MD - 123, USA.
-              </p>
-              <p><i class="icon-call-end"></i> 1.800.123.456789</p>
-              <p><i class="icon-envelope"></i> info@ecoshop.com</p>
-            </div>
-          </div>
-
-          <!-- HELPFUL LINKS -->
-          <div class="col-md-3">
-            <h6>HELPFUL LINKS</h6>
-            <ul class="link">
-              <li><a href="#."> Sản phẩm</a></li>
-              <li><a href="#."> Địa chỉ</a></li>
-              <li><a href="#."> Chính sách bảo mật</a></li>
-              <li><a href="#."> Bài viết</a></li>
-            </ul>
-          </div>
-
-          <!-- SHOP -->
-          <div class="col-md-3">
-            <h6>SHOP</h6>
-            <ul class="link">
-              <li><a href="#."> Giới thiệu</a></li>
-              <li><a href="#."> Sự nghiệp</a></li>
-              <li><a href="#."> Phương thức giao hàng</a></li>
-              <li><a href="#."> Liên hệ</a></li>
-              <li><a href="#."> Hỗ trợ</a></li>
-            </ul>
-          </div>
-
-          <!-- MY ACCOUNT -->
-          <div class="col-md-3">
-            <h6>MY ACCOUNT</h6>
-            <ul class="link">
-              <li><a href="#."> Đăng nhập</a></li>
-              <li><a href="#."> Tài khoản</a></li>
-              <li><a href="#."> Giỏ hàng</a></li>
-              <li><a href="#."> Danh sách yêu thích</a></li>
-              <li><a href="#."> Thanh toán</a></li>
-            </ul>
-          </div>
-
-          <!-- Rights -->
-          <div class="rights">
-            <p>© 2016 ecoshop All right reserved.</p>
-            <div class="scroll">
-              <a href="#wrap" class="go-up"><i class="lnr lnr-arrow-up"></i></a>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </div>
-    <script src="js/jquery-1.11.3.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/own-menu.js"></script>
-    <script src="js/jquery.lighter.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
-    <script
-      type="text/javascript"
-      src="rs-plugin/js/jquery.tp.t.min.js"
-    ></script>
-    <script type="text/javascript" src="rs-plugin/js/jquery.tp.min.js"></script>
-    <script src="js/main.js"></script>
-  </body>
-
-  <!-- Mirrored from demos.webicode.com/html/eco-shop-html/Single_Img_Demo/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 04 Nov 2023 14:38:07 GMT -->
-</html>
+      
