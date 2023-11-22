@@ -232,7 +232,7 @@
                       </li>
                       <li><a href="shopping-cart.html">MY CART</a></li>
                       <li><a href="#">ACCOUNT INFO</a></li>
-                      <li><a href="#">LOG OUT</a></li>
+                      <li><a href="index.php?act=dangky">Login</a></li>
                     </ul>
                   </li>
 

@@ -64,7 +64,7 @@
     <!-- Wrap -->
     <div id="wrap">
       <!-- header -->
-   <header>
+      <header>
         <div class="sticky">
           <div class="container">
             <!-- Logo -->

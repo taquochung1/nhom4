@@ -192,18 +192,13 @@ if (isset($_GET['act'])) {
             $listbinhluan = loadall_binhluan(0);
             include "binhluan/list.php";
             break;
-
-
-
             $listtk = loadall_taikhoan();
             $listkm = loadall_km();
             $listdanhmuc = loadall_danhmuc();
             $listsanpham = loadall_sanpham();
-
-
-
-
-
+        case 'dangky':           
+            include "layoutlogin/dangky.php";
+            break;
         default:
             include "home.php";
             break;
