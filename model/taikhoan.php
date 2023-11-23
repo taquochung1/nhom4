@@ -1,7 +1,7 @@
 <?php
-function insert_taikhoan($tendangnhap, $matkhau)
+function insert_taikhoan($tendangnhap, $matkhau,$email)
 {
-    $sql = "insert into tai_khoan(ten_dang_nhap,mat_khau) values('$tendangnhap','$matkhau')";
+    $sql = "insert into tai_khoan(ten_dang_nhap,mat_khau,email) values('$tendangnhap','$matkhau','$email')";
     pdo_execute($sql);
 }
 function delete_taikhoan($id)

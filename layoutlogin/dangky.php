@@ -40,7 +40,7 @@
                             <input class="form-control" type="email" name="email" placeholder="E-mail Address" required>
                             <input class="form-control" type="password" name="pass" placeholder="Password" required>
                             <div class="form-button">
-                                <button id="submit" type="submit" class="ibtn">Register</button>
+                                <button id="submit" type="submit" name="dangky" class="ibtn">Register</button>
                             </div>
                         </form>
                         <div class="other-links">
