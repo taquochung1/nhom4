@@ -1,4 +1,5 @@
 <?php 
+
 include "model/pdo.php";
 include "model/sanpham.php";
 include "model/danhmuc.php"; 
@@ -40,19 +41,15 @@ if((isset($_GET['act'])) && ($_GET['act']!="")){
             }
             $dssp=loadall_sanpham($kyw,$iddm);
             $tendm=load_ten_dm($iddm);
-            # code...
             include "viewphp/shop_02.php";
             break;
         case 'giohang':
-            # code...
             include "viewphp/shopping-cart.php";
             break;
         
         default:
-            # code...
             break;
     }
 }
-include "viewphp/home.php";
-include "viewphp/footer.php";
+
 ?>
