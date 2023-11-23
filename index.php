@@ -3,6 +3,7 @@
 include "model/pdo.php";
 include "model/sanpham.php";
 include "model/danhmuc.php";
+include "model/taikhoan.php";
 include "viewphp/header.php";
 include "global.php";
 $spnew = loadall_sanpham_detail();

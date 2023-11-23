@@ -38,11 +38,11 @@
                             <a href="login9.html">Login</a><a href="register9.html" class="active">Register</a>
                         </div>
                         <form action="index.php?act=dangky" method="post">
-                            <input class="form-control" type="text" name="name" placeholder="Full Name" required>
+                            <input class="form-control" type="text" name="tendangnhap" placeholder="Full Name" required>
                             <input class="form-control" type="email" name="email" placeholder="E-mail Address" required>
-                            <input class="form-control" type="password" name="pass" placeholder="Password" required>
+                            <input class="form-control" type="password" name="matkhau" placeholder="Password" required>
                             <div class="form-button">
-                                <button id="submit" type="submit" name="dangky" class="ibtn">Register</button>
+                                <input type="submit" name="dangky" value="Đăng ký"></input>
                             </div>
                             <h2 class="thongbao">
                                 <?php
