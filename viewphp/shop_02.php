@@ -366,39 +366,28 @@
                   <h5 class="shop-tittle margin-bottom-30">Danh mục</h5>
                   <ul class="shop-cate">
                     <li>
-                      <a href="#."> Chair <span>24</span></a>
+                      <a href="#."> Ghế <span></span></a>
                     </li>
                     <li>
-                      <a href="#."> Bag <span>122</span></a>
+                      <a href="#."> Sofa <span></span></a>
                     </li>
                     <li>
-                      <a href="#."> Soffa <span>09</span></a>
+                      <a href="#."> Giường <span></span></a>
                     </li>
                     <li>
-                      <a href="#."> Bed <span>12</span></a>
+                      <a href="#."> Bàn <span></span></a>
                     </li>
                     <li>
-                      <a href="#."> Shoes <span>98</span></a>
+                      <a href="#."> Ga giường <span></span></a>
                     </li>
                     <li>
-                      <a href="#."> Table <span>34</span></a>
+                      <a href="#."> Rèm cửa <span></span></a>
                     </li>
                     <li>
-                      <a href="#."> Bedsheets <span>23</span></a>
-                    </li>
-                    <li>
-                      <a href="#."> Curtains <span>43</span></a>
-                    </li>
-                    <li>
-                      <a href="#."> TV Cabinets <span>12</span></a>
-                    </li>
-                    <li>
-                      <a href="#."> Clocks <span>18</span></a>
-                    </li>
-                    <li>
-                      <a href="#."> Towels <span>25</span></a>
+                      <a href="#."> Đồng hồ <span></span></a>
                     </li>
                   </ul>
+                  <br>
 
                   <!-- FILTER BY PRICE -->
                   <!-- TAGS -->
@@ -412,7 +401,7 @@
                       alt=""
                     />
                     <div class="position-center-center">
-                      <span class="price"><small>$</small>299</span>
+                      
                       <div class="bnr-text">look hot with style</div>
                     </div>
                   </div>
@@ -423,11 +412,11 @@
               <div class="col-sm-9">
                 <div class="item-display">
                   <div class="row">
-                    <div class="col-xs-6">
+                    <!-- <div class="col-xs-6">
                       <span class="product-num"
                         >Showing 1 - 10 of 30 products</span
                       >
-                    </div>
+                    </div> -->
 
                     <!-- Products Select -->
                     <div class="col-xs-6"></div>
@@ -436,17 +425,60 @@
 
                 <!-- Popular Item Slide -->
                 <div class="papular-block row single-img-demos">
-                  <!-- Item -->
-                  <div class="col-md-4">
+                  <?php
+                  $i=0;
+                  foreach ($spnew as $sp) {
+                    extract($sp);
+                    $hinh=$img_path.$img;
+                    echo'<!-- <div class="col-md-4">
                     <div class="item">
-                      <!-- Item img -->
+                      
+                      <div class="item-img">
+                        <img
+                          class="img-1"
+                          src="'.$hinh.'"
+                          alt=""
+                        />
+                       
+                        <div class="overlay">
+                          <div class="position-center-center">
+                            <div class="inn">
+                            <img
+                            class="img-1"
+                            src="'.$hinh.'"
+                            alt=""
+                          />
+                              <a href="#."><i class="icon-basket"></i></a>
+                              <a href="#."><i class="icon-heart"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                     
+                      <div class="item-name">
+                        <a href="product-details.html">'.$ten_sp.'</a>
+                        <p>Lorem ipsum dolor sit amet</p>
+                      </div>
+                      
+                      <span class="price">'.$gia.'</span>
+                    </div>
+                  </div>' ;
+                  $i=+1;
+
+                  }
+                  ?>
+
+                  <!-- Item -->
+                  <!-- <div class="col-md-4">
+                    <div class="item">
+                      
                       <div class="item-img">
                         <img
                           class="img-1"
                           src="images/product-2-1.jpg"
                           alt=""
                         />
-                        <!-- Overlay -->
+                       
                         <div class="overlay">
                           <div class="position-center-center">
                             <div class="inn">
@@ -459,34 +491,30 @@
                           </div>
                         </div>
                       </div>
-                      <!-- Item Name -->
+                     
                       <div class="item-name">
                         <a href="product-details.html">stone cup</a>
                         <p>Lorem ipsum dolor sit amet</p>
                       </div>
-                      <!-- Price -->
+                      
                       <span class="price"><small>$</small>299</span>
                     </div>
                   </div>
 
-                  <!-- Item -->
                   <div class="col-md-4">
                     <div class="item">
-                      <!-- Sale Tags -->
-                      <div class="on-sale">10% <span>OFF</span></div>
-
-                      <!-- Item img -->
+                      
                       <div class="item-img">
                         <img
                           class="img-1"
-                          src="images/product-2-2.jpg"
+                          src="images/product-2-1.jpg"
                           alt=""
                         />
-                        <!-- Overlay -->
+                       
                         <div class="overlay">
                           <div class="position-center-center">
                             <div class="inn">
-                              <a href="images/product-2-2.jpg" data-lighter
+                              <a href="images/product-2-1.jpg" data-lighter
                                 ><i class="icon-magnifier"></i
                               ></a>
                               <a href="#."><i class="icon-basket"></i></a>
@@ -495,31 +523,30 @@
                           </div>
                         </div>
                       </div>
-                      <!-- Item Name -->
+                     
                       <div class="item-name">
-                        <a href="#.">gray bag</a>
+                        <a href="product-details.html">stone cup</a>
                         <p>Lorem ipsum dolor sit amet</p>
                       </div>
-                      <!-- Price -->
+                      
                       <span class="price"><small>$</small>299</span>
                     </div>
                   </div>
 
-                  <!-- Item -->
                   <div class="col-md-4">
                     <div class="item">
-                      <!-- Item img -->
+                      
                       <div class="item-img">
                         <img
                           class="img-1"
-                          src="images/product-2-3.jpg"
+                          src="images/product-2-1.jpg"
                           alt=""
                         />
-                        <!-- Overlay -->
+                       
                         <div class="overlay">
                           <div class="position-center-center">
                             <div class="inn">
-                              <a href="images/product-2-3.jpg" data-lighter
+                              <a href="images/product-2-1.jpg" data-lighter
                                 ><i class="icon-magnifier"></i
                               ></a>
                               <a href="#."><i class="icon-basket"></i></a>
@@ -528,31 +555,30 @@
                           </div>
                         </div>
                       </div>
-                      <!-- Item Name -->
+                     
                       <div class="item-name">
-                        <a href="#.">chiar</a>
+                        <a href="product-details.html">stone cup</a>
                         <p>Lorem ipsum dolor sit amet</p>
                       </div>
-                      <!-- Price -->
+                      
                       <span class="price"><small>$</small>299</span>
                     </div>
                   </div>
 
-                  <!-- Item -->
                   <div class="col-md-4">
                     <div class="item">
-                      <!-- Item img -->
+                      
                       <div class="item-img">
                         <img
                           class="img-1"
-                          src="images/product-2-4.jpg"
+                          src="images/product-2-1.jpg"
                           alt=""
                         />
-                        <!-- Overlay -->
+                       
                         <div class="overlay">
                           <div class="position-center-center">
                             <div class="inn">
-                              <a href="images/product-2-4.jpg" data-lighter
+                              <a href="images/product-2-1.jpg" data-lighter
                                 ><i class="icon-magnifier"></i
                               ></a>
                               <a href="#."><i class="icon-basket"></i></a>
@@ -561,27 +587,30 @@
                           </div>
                         </div>
                       </div>
-                      <!-- Item Name -->
+                     
                       <div class="item-name">
-                        <a href="#.">STool</a>
+                        <a href="product-details.html">stone cup</a>
                         <p>Lorem ipsum dolor sit amet</p>
                       </div>
-                      <!-- Price -->
+                      
                       <span class="price"><small>$</small>299</span>
                     </div>
                   </div>
 
-                  <!-- Item -->
                   <div class="col-md-4">
                     <div class="item">
-                      <!-- Item img -->
+                      
                       <div class="item-img">
-                        <img class="img-1" src="images/product-5.jpg" alt="" />
-                        <!-- Overlay -->
+                        <img
+                          class="img-1"
+                          src="images/product-2-1.jpg"
+                          alt=""
+                        />
+                       
                         <div class="overlay">
                           <div class="position-center-center">
                             <div class="inn">
-                              <a href="images/product-5.jpg" data-lighter
+                              <a href="images/product-2-1.jpg" data-lighter
                                 ><i class="icon-magnifier"></i
                               ></a>
                               <a href="#."><i class="icon-basket"></i></a>
@@ -590,27 +619,30 @@
                           </div>
                         </div>
                       </div>
-                      <!-- Item Name -->
+                     
                       <div class="item-name">
-                        <a href="#.">stone cup</a>
+                        <a href="product-details.html">stone cup</a>
                         <p>Lorem ipsum dolor sit amet</p>
                       </div>
-                      <!-- Price -->
+                      
                       <span class="price"><small>$</small>299</span>
                     </div>
                   </div>
 
-                  <!-- Item -->
                   <div class="col-md-4">
                     <div class="item">
-                      <!-- Item img -->
+                      
                       <div class="item-img">
-                        <img class="img-1" src="images/product-6.jpg" alt="" />
-                        <!-- Overlay -->
+                        <img
+                          class="img-1"
+                          src="images/product-2-1.jpg"
+                          alt=""
+                        />
+                       
                         <div class="overlay">
                           <div class="position-center-center">
                             <div class="inn">
-                              <a href="images/product-6.jpg" data-lighter
+                              <a href="images/product-2-1.jpg" data-lighter
                                 ><i class="icon-magnifier"></i
                               ></a>
                               <a href="#."><i class="icon-basket"></i></a>
@@ -619,27 +651,30 @@
                           </div>
                         </div>
                       </div>
-                      <!-- Item Name -->
+                     
                       <div class="item-name">
-                        <a href="#.">gray bag</a>
+                        <a href="product-details.html">stone cup</a>
                         <p>Lorem ipsum dolor sit amet</p>
                       </div>
-                      <!-- Price -->
+                      
                       <span class="price"><small>$</small>299</span>
                     </div>
                   </div>
 
-                  <!-- Item -->
                   <div class="col-md-4">
                     <div class="item">
-                      <!-- Item img -->
+                      
                       <div class="item-img">
-                        <img class="img-1" src="images/product-7.jpg" alt="" />
-                        <!-- Overlay -->
+                        <img
+                          class="img-1"
+                          src="images/product-2-1.jpg"
+                          alt=""
+                        />
+                       
                         <div class="overlay">
                           <div class="position-center-center">
                             <div class="inn">
-                              <a href="images/product-7.jpg" data-lighter
+                              <a href="images/product-2-1.jpg" data-lighter
                                 ><i class="icon-magnifier"></i
                               ></a>
                               <a href="#."><i class="icon-basket"></i></a>
@@ -648,27 +683,30 @@
                           </div>
                         </div>
                       </div>
-                      <!-- Item Name -->
+                     
                       <div class="item-name">
-                        <a href="#.">chiar</a>
+                        <a href="product-details.html">stone cup</a>
                         <p>Lorem ipsum dolor sit amet</p>
                       </div>
-                      <!-- Price -->
+                      
                       <span class="price"><small>$</small>299</span>
                     </div>
                   </div>
 
-                  <!-- Item -->
                   <div class="col-md-4">
                     <div class="item">
-                      <!-- Item img -->
+                      
                       <div class="item-img">
-                        <img class="img-1" src="images/product-8.jpg" alt="" />
-                        <!-- Overlay -->
+                        <img
+                          class="img-1"
+                          src="images/product-2-1.jpg"
+                          alt=""
+                        />
+                       
                         <div class="overlay">
                           <div class="position-center-center">
                             <div class="inn">
-                              <a href="images/product-8.jpg" data-lighter
+                              <a href="images/product-2-1.jpg" data-lighter
                                 ><i class="icon-magnifier"></i
                               ></a>
                               <a href="#."><i class="icon-basket"></i></a>
@@ -677,27 +715,30 @@
                           </div>
                         </div>
                       </div>
-                      <!-- Item Name -->
+                     
                       <div class="item-name">
-                        <a href="#.">STool</a>
+                        <a href="product-details.html">stone cup</a>
                         <p>Lorem ipsum dolor sit amet</p>
                       </div>
-                      <!-- Price -->
+                      
                       <span class="price"><small>$</small>299</span>
                     </div>
                   </div>
 
-                  <!-- Item -->
                   <div class="col-md-4">
                     <div class="item">
-                      <!-- Item img -->
+                      
                       <div class="item-img">
-                        <img class="img-1" src="images/product-9.jpg" alt="" />
-                        <!-- Overlay -->
+                        <img
+                          class="img-1"
+                          src="images/product-2-1.jpg"
+                          alt=""
+                        />
+                       
                         <div class="overlay">
                           <div class="position-center-center">
                             <div class="inn">
-                              <a href="images/product-9.jpg" data-lighter
+                              <a href="images/product-2-1.jpg" data-lighter
                                 ><i class="icon-magnifier"></i
                               ></a>
                               <a href="#."><i class="icon-basket"></i></a>
@@ -706,25 +747,32 @@
                           </div>
                         </div>
                       </div>
-                      <!-- Item Name -->
+                     
                       <div class="item-name">
-                        <a href="#.">stone cup</a>
+                        <a href="product-details.html">stone cup</a>
                         <p>Lorem ipsum dolor sit amet</p>
                       </div>
-                      <!-- Price -->
+                      
                       <span class="price"><small>$</small>299</span>
                     </div>
-                  </div>
+                  </div> -->
+
+                  
+                
+
+      
+
+           
                 </div>
 
                 <!-- Pagination -->
-                <ul class="pagination">
+                <!-- <ul class="pagination">
                   <li class="active"><a href="#">1</a></li>
                   <li><a href="#">2</a></li>
                   <li><a href="#">3</a></li>
                   <li><a href="#">4</a></li>
                   <li><a href="#">5</a></li>
-                </ul>
+                </ul> -->
               </div>
             </div>
           </div>

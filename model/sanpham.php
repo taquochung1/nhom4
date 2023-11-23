@@ -7,16 +7,16 @@ function delete_sanpham($id){
     $sql="delete from san_pham where id_sp=".$id;
                 pdo_execute($sql);
 }
-function loadall_sanpham_home(){
+function loadall_sanpham_detail(){
     $sql="SELECT * from san_pham where 1 order by id_sp desc limit 0,9";
     $listsanpham=pdo_query($sql);
     return $listsanpham;
 }
-function loadall_sanpham_top10(){
-    $sql="SELECT * from san_pham where 1 order by luotxem desc limit 0,10";
-    $listsanpham=pdo_query($sql);
-    return $listsanpham;
-}
+// function loadall_sanpham_top10(){
+//     $sql="SELECT * from san_pham where 1 order by luotxem desc limit 0,10";
+//     $listsanpham=pdo_query($sql);
+//     return $listsanpham;
+// }
 function loadall_sanpham($kyw="",$iddm=0){
     $sql="SELECT * from san_pham where 1";
     if($kyw!=""){

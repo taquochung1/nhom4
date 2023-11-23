@@ -1,5 +1,9 @@
 <?php 
-include "viewphp/header.php";
+include "model/pdo.php";
+include "model/sanpham.php";
+include "viewphp/header.php"; 
+include "global.php";
+$spnew = loadall_sanpham_detail();
 if((isset($_GET['act'])) && ($_GET['act']!="")){
     $act=$_GET['act'];
     switch ($act){
@@ -20,6 +24,20 @@ if((isset($_GET['act'])) && ($_GET['act']!="")){
             include "viewphp/product-detail.php";
             break;
         case 'sanpham':
+            if(isset($_POST['kyw']) && $_POST['kyw']>0){
+                $kyw=$_POST['kyw'];
+
+            } else {
+                $kyw="";
+            }
+            if(isset($_GET['iddm']) && $_GET['iddm']>0){
+                $iddm=$_GET['iddm'];
+                
+            } else {
+               $iddm=0;
+            }
+            $dssp=loadall_sanpham($kyw,$iddm);
+            $tendm=load_ten_dm($iddm);
             # code...
             include "viewphp/shop_02.php";
             break;
