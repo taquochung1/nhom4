@@ -1,9 +1,11 @@
 <?php 
 include "model/pdo.php";
 include "model/sanpham.php";
+include "model/danhmuc.php"; 
 include "viewphp/header.php"; 
 include "global.php";
 $spnew = loadall_sanpham_detail();
+$dsdm=loadall_danhmuc();
 if((isset($_GET['act'])) && ($_GET['act']!="")){
     $act=$_GET['act'];
     switch ($act){

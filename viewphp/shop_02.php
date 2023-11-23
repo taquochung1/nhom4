@@ -365,27 +365,15 @@
                   <!-- Category -->
                   <h5 class="shop-tittle margin-bottom-30">Danh mục</h5>
                   <ul class="shop-cate">
-                    <li>
-                      <a href="#."> Ghế <span></span></a>
-                    </li>
-                    <li>
-                      <a href="#."> Sofa <span></span></a>
-                    </li>
-                    <li>
-                      <a href="#."> Giường <span></span></a>
-                    </li>
-                    <li>
-                      <a href="#."> Bàn <span></span></a>
-                    </li>
-                    <li>
-                      <a href="#."> Ga giường <span></span></a>
-                    </li>
-                    <li>
-                      <a href="#."> Rèm cửa <span></span></a>
-                    </li>
-                    <li>
-                      <a href="#."> Đồng hồ <span></span></a>
-                    </li>
+                    <?php 
+                 foreach ($dsdm as $dm) {
+                  extract($dm);
+                  $linkdm="index.php?act=sanpham&iddm=" .$id_dm;
+                  echo' <li>
+                      <a href="#.">   '.$ten_dm.' <span></span></a>
+                    </li>';
+                 }
+                 ?>
                   </ul>
                   <br>
 
@@ -424,15 +412,15 @@
                 </div>
 
                 <!-- Popular Item Slide -->
-                <div class="papular-block row single-img-demos">
+                <div class="papular-block row single-img-demos">   
                   <?php
                   $i=0;
                   foreach ($spnew as $sp) {
                     extract($sp);
-                    $hinh=$img_path.$img;
-                    echo'<!-- <div class="col-md-4">
+                    $hinh=$hinhpath.$img;
+                    echo'<
+                    <div class="col-md-4">
                     <div class="item">
-                      
                       <div class="item-img">
                         <img
                           class="img-1"
@@ -440,14 +428,12 @@
                           alt=""
                         />
                        
-                        <div class="overlay">
+                         <div class="overlay">
                           <div class="position-center-center">
                             <div class="inn">
-                            <img
-                            class="img-1"
-                            src="'.$hinh.'"
-                            alt=""
-                          />
+                              <a href="'.$hinh.'" data-lighter
+                                ><i class="icon-magnifier"></i
+                              ></a>
                               <a href="#."><i class="icon-basket"></i></a>
                               <a href="#."><i class="icon-heart"></i></a>
                             </div>
@@ -461,379 +447,20 @@
                       </div>
                       
                       <span class="price">'.$gia.'</span>
-                    </div>
+                        </div>
                   </div>' ;
                   $i=+1;
 
                   }
                   ?>
-
-                  <!-- Item -->
-                  <!-- <div class="col-md-4">
-                    <div class="item">
-                      
-                      <div class="item-img">
-                        <img
-                          class="img-1"
-                          src="images/product-2-1.jpg"
-                          alt=""
-                        />
-                       
-                        <div class="overlay">
-                          <div class="position-center-center">
-                            <div class="inn">
-                              <a href="images/product-2-1.jpg" data-lighter
-                                ><i class="icon-magnifier"></i
-                              ></a>
-                              <a href="#."><i class="icon-basket"></i></a>
-                              <a href="#."><i class="icon-heart"></i></a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                     
-                      <div class="item-name">
-                        <a href="product-details.html">stone cup</a>
-                        <p>Lorem ipsum dolor sit amet</p>
-                      </div>
-                      
-                      <span class="price"><small>$</small>299</span>
-                    </div>
-                  </div>
-
-                  <div class="col-md-4">
-                    <div class="item">
-                      
-                      <div class="item-img">
-                        <img
-                          class="img-1"
-                          src="images/product-2-1.jpg"
-                          alt=""
-                        />
-                       
-                        <div class="overlay">
-                          <div class="position-center-center">
-                            <div class="inn">
-                              <a href="images/product-2-1.jpg" data-lighter
-                                ><i class="icon-magnifier"></i
-                              ></a>
-                              <a href="#."><i class="icon-basket"></i></a>
-                              <a href="#."><i class="icon-heart"></i></a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                     
-                      <div class="item-name">
-                        <a href="product-details.html">stone cup</a>
-                        <p>Lorem ipsum dolor sit amet</p>
-                      </div>
-                      
-                      <span class="price"><small>$</small>299</span>
-                    </div>
-                  </div>
-
-                  <div class="col-md-4">
-                    <div class="item">
-                      
-                      <div class="item-img">
-                        <img
-                          class="img-1"
-                          src="images/product-2-1.jpg"
-                          alt=""
-                        />
-                       
-                        <div class="overlay">
-                          <div class="position-center-center">
-                            <div class="inn">
-                              <a href="images/product-2-1.jpg" data-lighter
-                                ><i class="icon-magnifier"></i
-                              ></a>
-                              <a href="#."><i class="icon-basket"></i></a>
-                              <a href="#."><i class="icon-heart"></i></a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                     
-                      <div class="item-name">
-                        <a href="product-details.html">stone cup</a>
-                        <p>Lorem ipsum dolor sit amet</p>
-                      </div>
-                      
-                      <span class="price"><small>$</small>299</span>
-                    </div>
-                  </div>
-
-                  <div class="col-md-4">
-                    <div class="item">
-                      
-                      <div class="item-img">
-                        <img
-                          class="img-1"
-                          src="images/product-2-1.jpg"
-                          alt=""
-                        />
-                       
-                        <div class="overlay">
-                          <div class="position-center-center">
-                            <div class="inn">
-                              <a href="images/product-2-1.jpg" data-lighter
-                                ><i class="icon-magnifier"></i
-                              ></a>
-                              <a href="#."><i class="icon-basket"></i></a>
-                              <a href="#."><i class="icon-heart"></i></a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                     
-                      <div class="item-name">
-                        <a href="product-details.html">stone cup</a>
-                        <p>Lorem ipsum dolor sit amet</p>
-                      </div>
-                      
-                      <span class="price"><small>$</small>299</span>
-                    </div>
-                  </div>
-
-                  <div class="col-md-4">
-                    <div class="item">
-                      
-                      <div class="item-img">
-                        <img
-                          class="img-1"
-                          src="images/product-2-1.jpg"
-                          alt=""
-                        />
-                       
-                        <div class="overlay">
-                          <div class="position-center-center">
-                            <div class="inn">
-                              <a href="images/product-2-1.jpg" data-lighter
-                                ><i class="icon-magnifier"></i
-                              ></a>
-                              <a href="#."><i class="icon-basket"></i></a>
-                              <a href="#."><i class="icon-heart"></i></a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                     
-                      <div class="item-name">
-                        <a href="product-details.html">stone cup</a>
-                        <p>Lorem ipsum dolor sit amet</p>
-                      </div>
-                      
-                      <span class="price"><small>$</small>299</span>
-                    </div>
-                  </div>
-
-                  <div class="col-md-4">
-                    <div class="item">
-                      
-                      <div class="item-img">
-                        <img
-                          class="img-1"
-                          src="images/product-2-1.jpg"
-                          alt=""
-                        />
-                       
-                        <div class="overlay">
-                          <div class="position-center-center">
-                            <div class="inn">
-                              <a href="images/product-2-1.jpg" data-lighter
-                                ><i class="icon-magnifier"></i
-                              ></a>
-                              <a href="#."><i class="icon-basket"></i></a>
-                              <a href="#."><i class="icon-heart"></i></a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                     
-                      <div class="item-name">
-                        <a href="product-details.html">stone cup</a>
-                        <p>Lorem ipsum dolor sit amet</p>
-                      </div>
-                      
-                      <span class="price"><small>$</small>299</span>
-                    </div>
-                  </div>
-
-                  <div class="col-md-4">
-                    <div class="item">
-                      
-                      <div class="item-img">
-                        <img
-                          class="img-1"
-                          src="images/product-2-1.jpg"
-                          alt=""
-                        />
-                       
-                        <div class="overlay">
-                          <div class="position-center-center">
-                            <div class="inn">
-                              <a href="images/product-2-1.jpg" data-lighter
-                                ><i class="icon-magnifier"></i
-                              ></a>
-                              <a href="#."><i class="icon-basket"></i></a>
-                              <a href="#."><i class="icon-heart"></i></a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                     
-                      <div class="item-name">
-                        <a href="product-details.html">stone cup</a>
-                        <p>Lorem ipsum dolor sit amet</p>
-                      </div>
-                      
-                      <span class="price"><small>$</small>299</span>
-                    </div>
-                  </div>
-
-                  <div class="col-md-4">
-                    <div class="item">
-                      
-                      <div class="item-img">
-                        <img
-                          class="img-1"
-                          src="images/product-2-1.jpg"
-                          alt=""
-                        />
-                       
-                        <div class="overlay">
-                          <div class="position-center-center">
-                            <div class="inn">
-                              <a href="images/product-2-1.jpg" data-lighter
-                                ><i class="icon-magnifier"></i
-                              ></a>
-                              <a href="#."><i class="icon-basket"></i></a>
-                              <a href="#."><i class="icon-heart"></i></a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                     
-                      <div class="item-name">
-                        <a href="product-details.html">stone cup</a>
-                        <p>Lorem ipsum dolor sit amet</p>
-                      </div>
-                      
-                      <span class="price"><small>$</small>299</span>
-                    </div>
-                  </div>
-
-                  <div class="col-md-4">
-                    <div class="item">
-                      
-                      <div class="item-img">
-                        <img
-                          class="img-1"
-                          src="images/product-2-1.jpg"
-                          alt=""
-                        />
-                       
-                        <div class="overlay">
-                          <div class="position-center-center">
-                            <div class="inn">
-                              <a href="images/product-2-1.jpg" data-lighter
-                                ><i class="icon-magnifier"></i
-                              ></a>
-                              <a href="#."><i class="icon-basket"></i></a>
-                              <a href="#."><i class="icon-heart"></i></a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                     
-                      <div class="item-name">
-                        <a href="product-details.html">stone cup</a>
-                        <p>Lorem ipsum dolor sit amet</p>
-                      </div>
-                      
-                      <span class="price"><small>$</small>299</span>
-                    </div>
-                  </div> -->
-
-                  
-                
-
-      
-
-           
                 </div>
 
-                <!-- Pagination -->
-                <!-- <ul class="pagination">
-                  <li class="active"><a href="#">1</a></li>
-                  <li><a href="#">2</a></li>
-                  <li><a href="#">3</a></li>
-                  <li><a href="#">4</a></li>
-                  <li><a href="#">5</a></li>
-                </ul> -->
               </div>
             </div>
           </div>
         </section>
 
-        <!-- About -->
-        <section class="small-about padding-top-150 padding-bottom-150">
-          <div class="container">
-            <!-- Main Heading -->
-            <div class="heading text-center">
-              <h4>about ecoshop</h4>
-              <p>
-                Phasellus lacinia fermentum bibendum. Interdum et malesuada
-                fames ac ante ipsumien lacus, eu posuere odio luctus non. Nulla
-                lacinia, eros vel fermentum consectetur, risus purus tempc, et
-                iaculis odio dolor in ex.
-              </p>
-            </div>
-
-            <!-- Social Icons -->
-            <ul class="social_icons">
-              <li>
-                <a href="#."><i class="icon-social-facebook"></i></a>
-              </li>
-              <li>
-                <a href="#."><i class="icon-social-twitter"></i></a>
-              </li>
-              <li>
-                <a href="#."><i class="icon-social-tumblr"></i></a>
-              </li>
-              <li>
-                <a href="#."><i class="icon-social-youtube"></i></a>
-              </li>
-              <li>
-                <a href="#."><i class="icon-social-dribbble"></i></a>
-              </li>
-            </ul>
-          </div>
-        </section>
-
-        <!-- News Letter -->
-        <section class="news-letter padding-top-150 padding-bottom-150">
-          <div class="container">
-            <div class="heading light-head text-center margin-bottom-30">
-              <h4>NEWSLETTER</h4>
-              <span
-                >Phasellus lacinia fermentum bibendum. Interdum et malesuada
-                fames ac ante ipsumien lacus, eu posuere odi
-              </span>
-            </div>
-            <form>
-              <input
-                type="email"
-                placeholder="Enter your email address"
-                required
-              />
-              <button type="submit">SEND ME</button>
-            </form>
-          </div>
-        </section>
-      </div>
+       
 
       <!--======= FOOTER =========-->
       <footer>
