@@ -177,7 +177,7 @@
                       </li>
                       <li><a href="shopping-cart.php">MY CART</a></li>
                       <li><a href="#">ACCOUNT INFO</a></li>
-                      <li><a href="layoutlogin/dangky.php">Login</a></li>
+                      <li><a href="index.php?act=dangky">Login</a></li>
                     </ul>
                   </li>
 

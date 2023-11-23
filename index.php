@@ -13,8 +13,8 @@ if((isset($_GET['act'])) && ($_GET['act']!="")){
          case 'dangky':
              if(isset($_POST['dangky']) && ($_POST['dangky'])){
                 $email=$_POST['email'];
-                $user=$_POST['user'];
-                $pass=$_POST['pass'];
+                $tendangnhap=$_POST['tendangnhap'];
+                $matkhau=$_POST['matkhau'];
                 insert_taikhoan($tendangnhap, $matkhau,$email);
                 $thongbao="Đã đang ký thành công. Vui lòng đăng nhập để thực hiện chức năng ";
 
@@ -107,9 +107,10 @@ if((isset($_GET['act'])) && ($_GET['act']!="")){
     }
 } else {
     include "viewphp/home.php";
+    include "viewphp/footer.php";
     
 }
-include "viewphp/footer.php";
+
 
 
 ?>

@@ -42,48 +42,48 @@
     </div>
   </div>
 
-      <div id="main-content">
-      
-      </div>
-    </div>
-    <div id="main-content">
+  <div id="main-content">
+
+  </div>
+  </div>
+  <div id="main-content">
     <table class="table">
-  <thead class="thead-dark">
-    <tr>
-  
-      <th scope="col">Id</th>
-      <th scope="col">Tên Tài Khoản </th>
-      <th scope="col">Mật Khẩu</th>
-      <th scope="col">Chỉnh Sửa</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <?php foreach ($listtaikhoan as $taikhoan){
-                extract($taikhoan);
-                $suatk="index.php?act=suatk&id=".$id_kh;
-                $xoatk="index.php?act=xoatk&id=".$id_kh;
+      <thead class="thead-dark">
+        <tr>
+
+          <th scope="col">Id</th>
+          <th scope="col">Tên Tài Khoản </th>
+          <th scope="col">Mật Khẩu</th>
+          <th scope="col">Chỉnh Sửa</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <?php foreach ($listtaikhoan as $taikhoan) {
+            extract($taikhoan);
+            $suatk = "index.php?act=suatk&id=" . $id_kh;
+            $xoatk = "index.php?act=xoatk&id=" . $id_kh;
+
+            echo '<tr>
                 
-                echo'<tr>
-                
-                <td>'.$id_kh.'</td>
-                <td>'.$ten_dang_nhap.'</td>
-                <td>'.$mat_khau.'</td>
+                <td>' . $id_kh . '</td>
+                <td>' . $ten_dang_nhap . '</td>
+                <td>' . $email . '</td>
+                <td>' . $mat_khau . '</td>
                 <td>
-                  <a href="'.$suatk.'"> <input type="button" value="Sửa"></a>
-                 <a href="'.$xoatk.'"> <input  type="button" value="Xóa"></a>
+                  <a href="' . $suatk . '"> <input type="button" value="Sửa"></a>
+                 <a href="' . $xoatk . '"> <input  type="button" value="Xóa"></a>
                 </td>
                 </tr>';
-              } ?>
-    
-    </tr>         
-      </div>
-</table>
-       <div class="another-button">
-                <input class="btn btn-success" type="button" value="Xóa các mục đã chọn" >
-                <a href="index.php?act=addtk"><input class="btn btn-success" type="button" value="Thêm loại hàng"></a>
-         </div>
-    </div>
-    
-</div>
-         
+          } ?>
+
+        </tr>
+  </div>
+  </table>
+  <div class="another-button">
+    <input class="btn btn-success" type="button" value="Xóa các mục đã chọn">
+    <a href="index.php?act=addtk"><input class="btn btn-success" type="button" value="Thêm loại hàng"></a>
+  </div>
+  </div>
+
+  </div>
