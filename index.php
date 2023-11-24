@@ -3,8 +3,9 @@
 include "model/taikhoan.php";
 include "model/pdo.php";
 include "model/sanpham.php";
-include "model/danhmuc.php"; 
-include "viewphp/header.php"; 
+include "model/danhmuc.php";
+include "model/taikhoan.php";
+include "viewphp/header.php";
 include "global.php";
 $spnew = loadall_sanpham_detail();
 $dsdm=loadall_danhmuc();
@@ -62,8 +63,8 @@ if((isset($_GET['act'])) && ($_GET['act']!="")){
             //     } else {
             //         $thongbao="Email này ko tồn tại";
             //     }
-                 
-                 
+
+
             //  }
             // include "view/taikhoan/quenmk.php";
             // break;                        
@@ -81,38 +82,31 @@ if((isset($_GET['act'])) && ($_GET['act']!="")){
             break;
         case 'sanphamct':
             # code...
-            include "viewphp/product-detail.php";
+            include "viewphp/product-details.php";
             break;
         case 'sanpham':
-            if(isset($_POST['kyw']) && $_POST['kyw']>0){
-                $kyw=$_POST['kyw'];
-
+            if (isset($_POST['kyw']) && $_POST['kyw'] > 0) {
+                $kyw = $_POST['kyw'];
             } else {
-                $kyw="";
+                $kyw = "";
             }
-            if(isset($_GET['iddm']) && $_GET['iddm']>0){
-                $iddm=$_GET['iddm'];
-                
+            if (isset($_GET['iddm']) && $_GET['iddm'] > 0) {
+                $iddm = $_GET['iddm'];
             } else {
-               $iddm=0;
+                $iddm = 0;
             }
-            $dssp=loadall_sanpham($kyw,$iddm);
-            $tendm=load_ten_dm($iddm);
+            $dssp = loadall_sanpham($kyw, $iddm);
+            $tendm = load_ten_dm($iddm);
             include "viewphp/shop_02.php";
             break;
         case 'giohang':
             include "viewphp/shopping-cart.php";
             break;
-        
+
         default:
             break;
     }
 } else {
     include "viewphp/home.php";
     include "viewphp/footer.php";
-    
 }
-
-
-
-?>

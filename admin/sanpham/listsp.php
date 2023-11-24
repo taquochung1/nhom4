@@ -45,7 +45,7 @@
       <option value="0" selected>Tất cả</option>
       <?php foreach ($listdanhmuc as $danhmuc) {
         extract($danhmuc);
-        echo '<option value="' . $iddm . '">' . $ten_dm . '</option>';
+        echo '<option value="' . $id_dm . '">' . $ten_dm . '</option>';
       } ?>
 
     </select>
