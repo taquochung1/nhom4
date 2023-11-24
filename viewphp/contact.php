@@ -339,16 +339,16 @@
       <section class="sub-bnr" data-stellar-background-ratio="0.5">
         <div class="position-center-center">
           <div class="container">
-            <h4>contact us now</h4>
-            <p>
+            <h4>Liên hệ với chúng tôi</h4>
+            <!-- <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
               faucibus maximus vehicula. Sed feugiat, tellus vel tristique
               posuere, diam
-            </p>
-            <ol class="breadcrumb">
+            </p> -->
+            <!-- <ol class="breadcrumb">
               <li><a href="#">Home</a></li>
               <li class="active">contact</li>
-            </ol>
+            </ol> -->
           </div>
         </div>
       </section>
@@ -359,7 +359,7 @@
         <section class="contact padding-top-100 padding-bottom-100">
           <div class="container">
             <div class="contact-form">
-              <h5>PLEASE fill-up FEW details</h5>
+              <h5>Điền thông tin</h5>
               <div class="row">
                 <div class="col-md-8">
                   <!--======= Success Msg =========-->
@@ -379,7 +379,7 @@
                     <ul class="row">
                       <li class="col-sm-6">
                         <label
-                          >full name *
+                          >Họ tên*
                           <input
                             type="text"
                             class="form-control"
@@ -403,7 +403,7 @@
                       </li>
                       <li class="col-sm-6">
                         <label
-                          >Phone *
+                          >Số điện thoại *
                           <input
                             type="text"
                             class="form-control"
@@ -413,21 +413,10 @@
                           />
                         </label>
                       </li>
-                      <li class="col-sm-6">
-                        <label
-                          >SUBJECT
-                          <input
-                            type="text"
-                            class="form-control"
-                            name="website"
-                            id="website"
-                            placeholder=""
-                          />
-                        </label>
-                      </li>
+                      
                       <li class="col-sm-12">
                         <label
-                          >Message
+                          >Tin nhắn
                           <textarea
                             class="form-control"
                             name="message"
@@ -445,7 +434,7 @@
                           id="btn_submit"
                           onClick="proceed();"
                         >
-                          SEND MAIL
+                          Gửi tin nhắn
                         </button>
                       </li>
                     </ul>
@@ -455,7 +444,7 @@
                 <!--======= ADDRESS INFO  =========-->
                 <div class="col-md-4">
                   <div class="contact-info">
-                    <h6>OUR ADDRESS</h6>
+                    <h6>Địa chỉ</h6>
                     <ul>
                       <li>
                         <i class="icon-map-pin"></i> Street No. 12, Newyork
@@ -470,10 +459,10 @@
                         >
                       </li>
                       <li>
-                        <p>
+                        <!-- <p>
                           Lorem ipsum dolor sit amet, consectetur adipiscing
                           elit. Nullam erat turpis, pellentesque non leo eget.
-                        </p>
+                        </p> -->
                       </li>
                     </ul>
                   </div>
@@ -491,13 +480,13 @@
           <div class="container">
             <!-- Main Heading -->
             <div class="heading text-center">
-              <h4>about ecoshop</h4>
-              <p>
+              <h4>Giới thiệu Ecoshop</h4>
+              <!-- <p>
                 Phasellus lacinia fermentum bibendum. Interdum et malesuada
                 fames ac ante ipsumien lacus, eu posuere odio luctus non. Nulla
                 lacinia, eros vel fermentum consectetur, risus purus tempc, et
                 iaculis odio dolor in ex.
-              </p>
+              </p> -->
             </div>
 
             <!-- Social Icons -->
@@ -652,6 +641,18 @@
       }
       google.maps.event.addDomListener(window, "load", initialize_map);
     </script>
+    <script src="viewphp/assetslayout/js/jquery-1.11.3.min.js"></script>
+    <script src="viewphp/assetslayout/js/bootstrap.min.js"></script>
+    <script src="viewphp/assetslayout/js/own-menu.js"></script>
+    <script src="viewphp/assetslayout/js/jquery.lighter.js"></script>
+    <script src="viewphp/assetslayout/js/owl.carousel.min.js"></script>
+    <!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
+    <script
+      type="text/javascript"
+      src="viewphp/assetslayout/rs-plugin/js/jquery.tp.t.min.js"
+    ></script>
+    <script type="text/javascript" src="viewphp/assetslayout/rs-plugin/js/jquery.tp.min.js"></script>
+    <script src="viewphp/assetslayout/js/main.js"></script>
   </body>
 
   <!-- Mirrored from demos.webicode.com/html/eco-shop-html/Single_Img_Demo/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 04 Nov 2023 14:38:41 GMT -->

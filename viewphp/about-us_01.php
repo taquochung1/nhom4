@@ -831,6 +831,18 @@
       }
       google.maps.event.addDomListener(window, "load", initialize_map);
     </script>
+    <script src="viewphp/assetslayout/js/jquery-1.11.3.min.js"></script>
+    <script src="viewphp/assetslayout/js/bootstrap.min.js"></script>
+    <script src="viewphp/assetslayout/js/own-menu.js"></script>
+    <script src="viewphp/assetslayout/js/jquery.lighter.js"></script>
+    <script src="viewphp/assetslayout/js/owl.carousel.min.js"></script>
+    <!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
+    <script
+      type="text/javascript"
+      src="viewphp/assetslayout/rs-plugin/js/jquery.tp.t.min.js"
+    ></script>
+    <script type="text/javascript" src="viewphp/assetslayout/rs-plugin/js/jquery.tp.min.js"></script>
+    <script src="viewphp/assetslayout/js/main.js"></script>
   </body>
 
   <!-- Mirrored from demos.webicode.com/html/eco-shop-html/Single_Img_Demo/about-us_01.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 04 Nov 2023 14:38:39 GMT -->
