@@ -173,14 +173,15 @@
                     </a>
                     <ul class="dropdown-menu">
                       <li>
-                        <h6>HELLO! Jhon Smith</h6>
+                        <h6>XIN CHÀO CUONH</h6>
                       </li>
-                      <li><a href="shopping-cart.php">MY CART</a></li>
-                      <li><a href="#">ACCOUNT INFO</a></li>
-                      <li><a href="index.php?act=dangky">Login</a></li>
+                      <li><a href="shopping-cart.php">GIỎ HÀNG</a></li>
+                      <li><a href="#">THÔNG TIN TÀI KHOẢN</a></li>
+                      <li><a href="index.php?act=dangky">ĐĂNG KÝ</a></li>
+                      <li><a href="index.php?act=dangnhap">ĐĂNG NHẬP</a></li>
                     </ul>
                   </li>
-
+                    
                   <!-- USER BASKET -->
                   <li class="dropdown user-basket">
                     <a
