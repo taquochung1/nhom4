@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html class="no-js" lang="en">
   <!-- Mirrored from htmldemo.net/ezone/ezone/product-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 06 Nov 2023 14:57:22 GMT -->
@@ -14,6 +15,7 @@
       href="rs-plugin/css/settings.css"
       media="screen"
     />
+
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet" />
@@ -854,8 +856,8 @@
                   <ul>
                     <li><a href="cart.html">Cart</a></li>
                     <li><a href="register.html">My Account</a></li>
-                    <li><a href="login.html">Login</a></li>
-                    <li><a href="register.html">Register</a></li>
+                    <li><a href="login.html">Đăng nhập </a></li>
+                    <li><a href="register.html">Đăng ký</a></li>
                     <li><a href="#">Support</a></li>
                     <li><a href="#">Track</a></li>
                   </ul>

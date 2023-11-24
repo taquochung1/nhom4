@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from brandio.io/envato/iofrm/html/register9.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 22 Nov 2023 15:13:35 GMT -->
+<!-- Mirrored from brandio.io/envato/iofrm/html/login9.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 22 Nov 2023 15:12:12 GMT -->
 
 <head>
     <meta charset="UTF-8">
@@ -28,24 +28,36 @@
                 <div class="form-content">
                     <div class="form-items">
                         <div class="website-logo-inside">
-                            <a href="index.html">
+                            <!-- <a href="index.html"> -->
                                 <div class="logo">
                                     <img class="logo-size" src="images/logo-light.svg" alt="">
                                 </div>
                             </a>
                         </div>
                         <div class="page-links">
-                            <a href="index.php?act=dangnhap">Đăng nhập </a><a href="register9.html" class="active">Đăng ký
-                            </a>
+                            <a href="index.php?act=dangnhap" class="active">Đăng nhập</a>
+                            <a href="index.php?act=dangky">Đăng ký</a>
+                            <?php
+                            if (isset($_SESSION['tendangnhap'])) {
+                                extract($_SESSION['tendangnhap'])
+                            ?>
+                                 <div>Xin chào <?='$tendangnhap'?>></div>
+                                 <div></div>
+                               
+                               
+
+                            <?php
+                            } else {
+
+                            ?>
                         </div>
-                        <form action="index.php?act=dangky" method="post">
-                            
-                            <input class="form-control" type="email" name="email" placeholder="E-mail Address" required>
+                        <form>
                             <input class="form-control" type="text" name="tendangnhap" placeholder="Tên đăng nhập" required>
-                            <input class="form-control" type="password" name="matkhau" placeholder="Mật khẩu" required>
+                            <input class="form-control" type="password" name="matkhau" placeholder="Password" required>
                             <div class="form-button">
-                                <!-- <button id="submit" type="submit" name="dangky" class="ibtn">Register</button> -->
-                                <input type="submit" value="Đăng ký" name="dangky">
+                                <!-- <button id="submit" type="submit" class="ibtn">Đăng nhập</button> -->
+                                <input type="submit" value="Đăng nhập " name="dangnhap">
+                                <a href="forget9.html">Quên mật khẩu</a>
                             </div>
                             <h2 class="thongbao">
                                 <?php
@@ -56,20 +68,23 @@
                                 ?>
                             </h2>
                         </form>
+
                         <div class="other-links">
-                            <span>Or register with</span><a href="#">Facebook</a><a href="#">Google</a><a href="#">Linkedin</a>
+                            <span>Or login with</span><a href="#">Facebook</a><a href="#">Google</a><a href="#">Linkedin</a>
                         </div>
+                    <?php }  ?>
                     </div>
+
                 </div>
             </div>
         </div>
     </div>
-    <script src="layoutlogin/js/jquery.min.js"></script>
-    <script src="layoutlogin/js/popper.min.js"></script>
-    <script src="layoutlogin/js/bootstrap.min.js"></script>
-    <script src="layoutlogin/js/main.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
-<!-- Mirrored from brandio.io/envato/iofrm/html/register9.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 22 Nov 2023 15:13:35 GMT -->
+<!-- Mirrored from brandio.io/envato/iofrm/html/login9.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 22 Nov 2023 15:12:23 GMT -->
 
 </html>
