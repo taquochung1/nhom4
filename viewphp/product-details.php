@@ -198,20 +198,28 @@
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"><i class="icon-basket-loaded"></i>
                 </a>
                 <ul class="dropdown-menu">
-                  <li>
-                    <div class="media-left">
-                      <div class="cart-img">
-                        <a href="#">
-                          <img class="media-object img-responsive" src="viewphp/assetslayout//cart-img-1.jpg" alt="..." />
-                        </a>
+                  <?php
+                  $tong = 0;
+                  foreach ($_SESSION['mycart'] as $cart) {
+                    $hinh = $hinhpath . $cart[2];
+                    $ttien = $cart[3] * $cart[4];
+                    $tong += $ttien;
+                    echo '
+                    <li>
+                      <div class="media-left">
+                        <div class="cart-img">
+                          <a href="#">
+                            <img class="media-object img-responsive" src="' . $hinh . '" alt="..." />
+                          </a>
+                        </div>
                       </div>
-                    </div>
-                    <div class="media-body">
-                      <h6 class="media-heading">WOOD CHAIR</h6>
-                      <span class="price">129.00 USD</span>
-                      <span class="qty">QTY: 01</span>
-                    </div>
-                  </li>
+                      <div class="media-body">
+                        <h6 class="media-heading">' . $cart[1] . '</h6>
+                        <span class="price">' . $cart[3] . ' USD</span>
+                        <span class="qty">QTY: 01</span>
+                      </div>
+                    </li>';
+                  } ?>
                   <li>
                     <div class="media-left">
                       <div class="cart-img">
@@ -232,10 +240,10 @@
                   <li class="margin-0">
                     <div class="row">
                       <div class="col-xs-6">
-                        <a href="shopping-cart.php" class="btn">VIEW CART</a>
+                        <a href="index.php?act=viewcart" class="btn">VIEW CART</a>
                       </div>
                       <div class="col-xs-6">
-                        <a href="checkout.php" class="btn">CHECK OUT</a>
+                        <a href="" class="btn">CHECK OUT</a>
                       </div>
                     </div>
                   </li>
@@ -1402,6 +1410,26 @@
   <script src="viewphp/assetsproducts/js/owl.carousel.min.js"></script>
   <script src="viewphp/assetsproducts/js/plugins.js"></script>
   <script src="viewphp/assetsproducts/js/main.js"></script>
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/own-menu.js"></script>
+  <script src="js/jquery.lighter.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+
+  <!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
+  <script type="text/javascript" src="rs-plugin/js/jquery.tp.t.min.js"></script>
+  <script type="text/javascript" src="rs-plugin/js/jquery.tp.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/main.js"></script>
+  <script src="viewphp/assetslayout/js/jquery-1.11.3.min.js"></script>
+  <script src="viewphp/assetslayout/js/bootstrap.min.js"></script>
+  <script src="viewphp/assetslayout/js/own-menu.js"></script>
+  <script src="viewphp/assetslayout/js/jquery.lighter.js"></script>
+  <script src="viewphp/assetslayout/js/owl.carousel.min.js"></script>
+  <!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
+  <script type="text/javascript" src="viewphp/assetslayout/rs-plugin/js/jquery.tp.t.min.js"></script>
+  <script type="text/javascript" src="viewphp/assetslayout/rs-plugin/js/jquery.tp.min.js"></script>
+  <script src="viewphp/assetslayout/js/main.js"></script>
 </body>
 
 <!-- Mirrored from htmldemo.net/ezone/ezone/product-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 06 Nov 2023 14:58:02 GMT -->

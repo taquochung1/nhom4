@@ -211,20 +211,28 @@
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"><i class="icon-basket-loaded"></i>
                   </a>
                   <ul class="dropdown-menu">
+                    <?php
+                    $tong = 0;
+                    foreach ($_SESSION['mycart'] as $cart) {
+                      $hinh = $hinhpath . $cart[2];
+                      $ttien = $cart[3] * $cart[4];
+                      $tong += $ttien;
+                      echo '
                     <li>
                       <div class="media-left">
                         <div class="cart-img">
                           <a href="#">
-                            <img class="media-object img-responsive" src="viewphp/assetslayout//cart-img-1.jpg" alt="..." />
+                            <img class="media-object img-responsive" src="' . $hinh . '" alt="..." />
                           </a>
                         </div>
                       </div>
                       <div class="media-body">
-                        <h6 class="media-heading">WOOD CHAIR</h6>
-                        <span class="price">129.00 USD</span>
+                        <h6 class="media-heading">' . $cart[1] . '</h6>
+                        <span class="price">' . $cart[3] . ' USD</span>
                         <span class="qty">QTY: 01</span>
                       </div>
-                    </li>
+                    </li>';
+                    } ?>
                     <li>
                       <div class="media-left">
                         <div class="cart-img">
@@ -245,10 +253,10 @@
                     <li class="margin-0">
                       <div class="row">
                         <div class="col-xs-6">
-                          <a href="shopping-cart.php" class="btn">VIEW CART</a>
+                          <a href="index.php?act=viewcart" class="btn">VIEW CART</a>
                         </div>
                         <div class="col-xs-6">
-                          <a href="checkout.php" class="btn">CHECK OUT</a>
+                          <a href="" class="btn">CHECK OUT</a>
                         </div>
                       </div>
                     </li>
@@ -332,56 +340,77 @@
             </div>
 
             <?php
-            $tong=0;
+            $tong = 0;
             foreach ($_SESSION['mycart'] as $cart) {
-              $hinh = $hinhpath.$cart[2];
-              $ttien=$cart[3]*$cart[4];
-              $tong=+$ttien;
+              $hinh = $hinhpath . $cart[2];
+              $ttien = $cart[3] * $cart[4];
+              $tong += $ttien;
               echo '
-            <!-- NAME -->
-            <li class="col-sm-4 text-left">
-              <h6>'.$cart[1].'</h6>
-            </li>
-            <li class="col-sm-4 text-left">
-             <img src ="'.$hinh.'" alt="">
-            </li>
-            <!-- PRICE -->
-            <li class="col-sm-2">
-              <h6>'.$cart[3].'</h6>
-            </li>
-            <!-- QTY -->
-            <li class="col-sm-1">
-              <h6>'.$cart[4].'</h6>
-            </li>
+            <ul class="row cart-details">
+                <li class="col-sm-6">
+                  <div class="media">
+                    <!-- Media Image -->
+                    <div class="media-left media-middle">
+                      <a href="#." class="item-img">
+                        <img
+                          class="media-object"
+                          src="' . $hinh . '"
+                          alt=""
+                        />
+                      </a>
+                    </div>
 
-            <!-- TOTAL PRICE -->
-            <li class="col-sm-2">
-              <h6>'.$ttien.'</h6>
-            </li>
-            <li class="col-sm-1"></li>
-          </ul>';
-              # code...
+                    <!-- Item Name -->
+                    <div class="media-body">
+                      <div class="position-center-center">
+                        <h5>' . $cart[1] . '</h5>
+                        <p>Lorem ipsum dolor sit amet</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <!-- PRICE -->
+                <li class="col-sm-2">
+                  <div class="position-center-center">
+                    <span class="price">' . $cart[3] . '<small>đ</small></span>
+                  </div>
+                </li>
+
+                <!-- QTY -->
+                <li class="col-sm-1">
+                  <div class="position-center-center">
+                    <div class="quinty">
+                      <!-- QTY -->
+                     
+                      <input type="number" min="0" name="soluong" id="" value="' . $cart[4] . '">
+                    </div>
+                  </div>
+                </li>
+
+                <!-- TOTAL PRICE -->
+                <li class="col-sm-2">
+                  <div class="position-center-center">
+                    <span class="price">' . $ttien . '<small>$</small></span>
+                  </div>
+                </li>
+
+                <!-- REMOVE -->
+                <li class="col-sm-1">
+                  <div class="position-center-center">
+                    <a href="#."><i class="icon-close"></i></a>
+                  </div>
+                </li>
+              </ul>
+';
             }
-            echo '<li class="col-sm-2 text-left">
-            <h6 colspan="4">Tổng đơn hàng</h6>
-          </li>
-          <li class="col-sm-2 text-left">
-            <h6>'.$tong.'</h6>
-          </li>'
-         
-          
-            // $tong = 0;
-            // foreach ($_SESSION['mycart'] as $cart) {
-            //   $hinh = $hinhpath . $cart[2];
-            //   $ttien = $cart[3] * $cart[4];
-            //   $tong += $ttien;
-            //   echo ` <tr>
-            //     <td>'.$hinh.'</td>
-            //     <td>'.$cart[1].'</td>
-            //     <td>'.$cart[4].'</td>
-                
-            //     </tr> `;
-            // }
+            echo '<div class="col-sm-5">
+                <div class="grand-total">
+                  <div class="order-detail">
+                    <p class="all-total">TOTAL COST <span>' . $tong . '</span></p>
+                  </div>
+                </div>
+              </div>';
             ?>
 
 
@@ -405,21 +434,6 @@
                 <div class="coupn-btn">
                   <a href="#." class="btn">continue shopping</a>
                   <a href="#." class="btn">update cart</a>
-                </div>
-              </div>
-
-              <!-- SUB TOTAL -->
-              <div class="col-sm-5">
-                <h6>Tổng tiền</h6>
-                <div class="grand-total">
-                  <div class="order-detail">
-                    <p>WOOD CHAIR <span>$598 </span></p>
-                    <p>STOOL <span>$199 </span></p>
-                    <p>WOOD SPOON <span> $139</span></p>
-
-                    <!-- SUB TOTAL -->
-                    <p class="all-total">TOTAL COST <span> $998</span></p>
-                  </div>
                 </div>
               </div>
             </div>

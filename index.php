@@ -86,6 +86,10 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             # code...
             include "viewphp/product-details.php";
             break;
+        case 'viewcart':
+            # code...
+            include "viewphp/shopping-cart.php";
+            break;
         case 'sanpham':
             if (isset($_POST['kyw']) && $_POST['kyw'] > 0) {
                 $kyw = $_POST['kyw'];

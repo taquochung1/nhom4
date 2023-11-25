@@ -163,20 +163,28 @@
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"><i class="icon-basket-loaded"></i>
                   </a>
                   <ul class="dropdown-menu">
+                    <?php
+                    $tong = 0;
+                    foreach ($_SESSION['mycart'] as $cart) {
+                      $hinh = $hinhpath . $cart[2];
+                      $ttien = $cart[3] * $cart[4];
+                      $tong += $ttien;
+                      echo '
                     <li>
                       <div class="media-left">
                         <div class="cart-img">
                           <a href="#">
-                            <img class="media-object img-responsive" src="viewphp/assetslayout//cart-img-1.jpg" alt="..." />
+                            <img class="media-object img-responsive" src="' . $hinh . '" alt="..." />
                           </a>
                         </div>
                       </div>
                       <div class="media-body">
-                        <h6 class="media-heading">WOOD CHAIR</h6>
-                        <span class="price">129.00 USD</span>
+                        <h6 class="media-heading">' . $cart[1] . '</h6>
+                        <span class="price">' . $cart[3] . ' USD</span>
                         <span class="qty">QTY: 01</span>
                       </div>
-                    </li>
+                    </li>';
+                    } ?>
                     <li>
                       <div class="media-left">
                         <div class="cart-img">
@@ -197,10 +205,10 @@
                     <li class="margin-0">
                       <div class="row">
                         <div class="col-xs-6">
-                          <a href="shopping-cart.php" class="btn">VIEW CART</a>
+                          <a href="index.php?act=viewcart" class="btn">VIEW CART</a>
                         </div>
                         <div class="col-xs-6">
-                          <a href="checkout.php" class="btn">CHECK OUT</a>
+                          <a href="" class="btn">CHECK OUT</a>
                         </div>
                       </div>
                     </li>
