@@ -341,10 +341,12 @@
 
             <?php
             $tong = 0;
+            $i = 0;
             foreach ($_SESSION['mycart'] as $cart) {
               $hinh = $hinhpath . $cart[2];
               $ttien = $cart[3] * $cart[4];
               $tong += $ttien;
+              $xoasp = '<a href="index.php?act=deletecart&idcart=' . $i . '"><input type="button" value="Xóa"></a>';
               echo '
             <ul class="row cart-details">
                 <li class="col-sm-6">
@@ -398,11 +400,11 @@
                 <!-- REMOVE -->
                 <li class="col-sm-1">
                   <div class="position-center-center">
-                    <a href="#."><i class="icon-close"></i></a>
+                   <span>' . $xoasp . ' </span>
                   </div>
                 </li>
-              </ul>
-';
+              </ul>';
+              $i += 1;
             }
             echo '<div class="col-sm-5">
                 <div class="grand-total">
@@ -412,6 +414,9 @@
                 </div>
               </div>';
             ?>
+            <a href="index.php?act=dathang"><input type="submit" class="btn btn-small btn-dark" namne="dathang" value="Đặt hàng ngay">
+
+              </input></a>
 
 
       </section>
@@ -428,7 +433,7 @@
                 <form>
                   <input type="text" value="" placeholder="ENTER YOUR CODE IF YOU HAVE ONE" />
                   <button type="submit" class="btn btn-small btn-dark">
-                    Áp dụng mã giảm giá
+                    Áp mã giảm giá
                   </button>
                 </form>
                 <div class="coupn-btn">

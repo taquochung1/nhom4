@@ -320,65 +320,30 @@
                 <!-- ESTIMATE SHIPPING & TAX -->
                 <div class="col-sm-7">
                   <h6>BILLING DETAILS</h6>
+                  <?php
+                  if (isset($_SESSION['tendangnhap'])) {
+                    $tendangnhap = $_SESSION['tendangnhap']['ten_dang_nhap'];
+                    $email = $_SESSION['tendangnhap']['email'];
+                  } else {
+                    $tendangnhap = "";
+                    $email = "";
+                  }
+                  ?>
                   <form>
                     <ul class="row">
                       <!-- Name -->
                       <li class="col-md-6">
                         <label>
-                          *FIRST NAME
-                          <input type="text" name="first-name" value="" placeholder="" />
+                          Name
+                          <input type="text" name="contry-state" value="<?= $tendangnhap ?>" placeholder="" />
                         </label>
                       </li>
-                      <!-- LAST NAME -->
-                      <li class="col-md-6">
-                        <label>
-                          *LAST NAME
-                          <input type="text" name="last-name" value="" placeholder="" />
-                        </label>
-                      </li>
-                      <li class="col-md-6">
-                        <!-- COMPANY NAME -->
-                        <label>COMPANY NAME
-                          <input type="text" name="company" value="" placeholder="" />
-                        </label>
-                      </li>
-                      <li class="col-md-6">
-                        <!-- ADDRESS -->
-                        <label>*ADDRESS
-                          <input type="text" name="address" value="" placeholder="" />
-                        </label>
-                      </li>
-                      <!-- TOWN/CITY -->
-                      <li class="col-md-6">
-                        <label>*TOWN/CITY
-                          <input type="text" name="town" value="" placeholder="" />
-                        </label>
-                      </li>
-
-                      <!-- COUNTRY -->
-                      <li class="col-md-6">
-                        <label>
-                          COUNTRY
-                          <input type="text" name="contry-state" value="" placeholder="" />
-                        </label>
-                      </li>
-
-                      <!-- EMAIL ADDRESS -->
                       <li class="col-md-6">
                         <label>
                           *EMAIL ADDRESS
-                          <input type="text" name="contry-state" value="" placeholder="" />
+                          <input type="text" name="contry-state" value="<?= $email ?>" placeholder="" />
                         </label>
                       </li>
-                      <!-- PHONE -->
-                      <li class="col-md-6">
-                        <label>
-                          *PHONE
-                          <input type="text" name="postal-code" value="" placeholder="" />
-                        </label>
-                      </li>
-
-                      <!-- PHONE -->
                       <li class="col-md-6">
                         <button type="submit" class="btn">continue</button>
                       </li>
@@ -467,14 +432,21 @@
                 <div class="col-sm-5">
                   <h6>YOUR ORDER</h6>
                   <div class="order-place">
+                    <?php
+                    $tong = 0;
+                    $i = 0;
+                    foreach ($_SESSION['mycart'] as $cart) {
+                      $hinh = $hinhpath . $cart[2];
+                      $ttien = $cart[3] * $cart[4];
+                      $tong += $ttien;
+                      echo '
                     <div class="order-detail">
-                      <p>WOOD CHAIR <span>$598 </span></p>
-                      <p>STOOL <span>$199 </span></p>
-                      <p>WOOD SPOON <span> $139</span></p>
-
+                      <p>' . $cart[1] . '<span>' . $cart[3] . '</span></p>
                       <!-- SUB TOTAL -->
-                      <p class="all-total">TOTAL COST <span> $998</span></p>
-                    </div>
+                      
+                    </div>';
+                    }
+                    echo '<p class="all-total">TOTAL COST <span>' . $tong . '</span></p>'; ?>
                     <div class="pay-meth">
                       <ul>
                         <li>
@@ -653,6 +625,15 @@
   <script type="text/javascript" src="rs-plugin/js/jquery.tp.min.js"></script>
   <script src="js/main.js"></script>
   <script src="js/main.js"></script>
+  <script src="viewphp/assetslayout/js/jquery-1.11.3.min.js"></script>
+  <script src="viewphp/assetslayout/js/bootstrap.min.js"></script>
+  <script src="viewphp/assetslayout/js/own-menu.js"></script>
+  <script src="viewphp/assetslayout/js/jquery.lighter.js"></script>
+  <script src="viewphp/assetslayout/js/owl.carousel.min.js"></script>
+  <!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
+  <script type="text/javascript" src="viewphp/assetslayout/rs-plugin/js/jquery.tp.t.min.js"></script>
+  <script type="text/javascript" src="viewphp/assetslayout/rs-plugin/js/jquery.tp.min.js"></script>
+  <script src="viewphp/assetslayout/js/main.js"></script>
 </body>
 
 <!-- Mirrored from demos.webicode.com/html/eco-shop-html/Single_Img_Demo/checkout.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 04 Nov 2023 14:38:36 GMT -->

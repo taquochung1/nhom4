@@ -212,26 +212,27 @@
                   </a>
                   <ul class="dropdown-menu">
                     <?php
-            $tong = 0;
-            foreach ($_SESSION['mycart'] as $cart) {
-              $hinh = $hinhpath . $cart[2];
-              $ttien = $cart[3] * $cart[4];
-              $tong += $ttien;
-              echo '
+                    $tong = 0;
+                    foreach ($_SESSION['mycart'] as $cart) {
+                      $hinh = $hinhpath . $cart[2];
+                      $ttien = $cart[3] * $cart[4];
+                      $tong += $ttien;
+                      echo '
                     <li>
                       <div class="media-left">
                         <div class="cart-img">
                           <a href="#">
-                            <img class="media-object img-responsive" src="'.$hinh.'" alt="..." />
+                            <img class="media-object img-responsive" src="' . $hinh . '" alt="..." />
                           </a>
                         </div>
                       </div>
                       <div class="media-body">
-                        <h6 class="media-heading">'.$cart[1].'</h6>
-                        <span class="price">'.$cart[3].' USD</span>
+                        <h6 class="media-heading">' . $cart[1] . '</h6>
+                        <span class="price">' . $cart[3] . ' USD</span>
                         <span class="qty">QTY: 01</span>
                       </div>
-                    </li>';}?>
+                    </li>';
+                    } ?>
                     <li>
                       <div class="media-left">
                         <div class="cart-img">
@@ -378,13 +379,21 @@
                        
                          <div class="overlay">
                           <div class="position-center-center">
-                            <div class="inn">
+                           <form action="index.php?act=addtocart" method="post">
+                      <input type="hidden" name="id_sp" value="' . $id_sp . '">
+                      <input type="hidden" name="ten_sp" value="' . $ten_sp . '">
+                      <input type="hidden" name="img" value="' . $img . '">
+                      <input type="hidden" name="gia" value="' . $gia . '">
+                       <div class="inn">
                               <a href="" data-lighter
                                 ><i class="icon-magnifier"></i
                               ></a>
-                              <a href="index.php?act=addtocart"></a>
+                              <input type="submit" name="addtocart" value="Thêm"  >
                               <a href="#."><i class="icon-heart"></i></a>
                             </div>
+                     
+                       </form> 
+                           
                           </div>
                         </div>
                       </div>
@@ -397,13 +406,7 @@
                       <span class="price">' . $gia . 'đ</span>
                       
                         </div>
-                      <form action="index.php?act=addtocart" method="post">
-                      <input type="hidden" name="id_sp" value="' . $id_sp . '">
-                      <input type="hidden" name="ten_sp" value="' . $ten_sp . '">
-                      <input type="hidden" name="img" value="' . $img . '">
-                      <input type="hidden" name="gia" value="' . $gia . '">
-                      <input type="submit" name="addtocart" value="Them gio hang" >
-                       </form> 
+                     
                   </div>';
                   $i = +1;
                 }

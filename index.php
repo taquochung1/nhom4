@@ -74,10 +74,6 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             # code...
             include "viewphp/about-us_01.php";
             break;
-        case 'gioithieu':
-            # code...
-            include "viewphp/about-us_01.php";
-            break;
         case 'lienhe':
             # code...
             include "viewphp/contact.php";
@@ -89,6 +85,10 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
         case 'viewcart':
             # code...
             include "viewphp/shopping-cart.php";
+            break;
+        case 'dathang':
+            # code...
+            include "viewphp/checkout.php";
             break;
         case 'sanpham':
             if (isset($_POST['kyw']) && $_POST['kyw'] > 0) {
@@ -117,6 +117,15 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
                 array_push($_SESSION['mycart'], $spadd);
             }
             include "viewphp/shopping-cart.php";
+            break;
+        case 'deletecart':
+            if (isset($_GET['idcart'])) {
+                array_slice($_SESSION['mycart'], $_GET['idcart'], 1);
+            } else {
+                $_SESSION['mycart'] = [];
+            }
+
+            header('location:index.php?act=viewcart');
             break;
 
         default:
