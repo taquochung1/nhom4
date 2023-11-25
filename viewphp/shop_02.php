@@ -70,7 +70,7 @@
             <div class="collapse navbar-collapse" id="nav-open-btn">
               <ul class="nav">
                 <li class="dropdown">
-                  <a href="index.php" class="dropdown-toggle" data-toggle="dropdown">Trang chủ</a>
+                  <a href="home.php" class="dropdown-toggle" data-toggle="dropdown">Trang chủ</a>
                 </li>
                 <li class="dropdown">
                   <a href="index.php?act=sanpham">Sản phẩm</a>
@@ -182,14 +182,29 @@
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="icon-user"></i>
                   </a>
                   <ul class="dropdown-menu">
-                    <li>
-                      <h6>HELLO! Jhon Smith</h6>
-                    </li>
-                    <li><a href="shopping-cart.php">MY CART</a></li>
-                    <li><a href="#">ACCOUNT INFO</a></li>
-                    <li><a href="index.php?act=dangky">Login</a></li>
+                    <?php
+                    if (isset($_SESSION['tendangnhap'])) {
+                      extract($_SESSION['tendangnhap']);
+                    ?>
+                      <li>
+                        <h6>XIN CHÀO <?= $ten_dang_nhap ?></h6>
+                      </li>
+                      <li><a href="shopping-cart.php">Giỏ hàng</a></li>
+                      <li><a href="index.php?act=thoat">Đăng xuất</a></li>
+                    <?php
+                    } else {
+                    ?>
+                      <li>
+                        <h6>XIN CHÀO</h6>
+                      </li>
+                      <li><a href="shopping-cart.php">GIỎ HÀNG</a></li>
+                      <li><a href="index.php?act=dangky">ĐĂNG KÝ</a></li>
+                      <li><a href="index.php?act=dangnhap">ĐĂNG NHẬP</a></li>
+                    <?php } ?>
                   </ul>
+
                 </li>
+
 
                 <!-- USER BASKET -->
                 <li class="dropdown user-basket">
@@ -300,7 +315,7 @@
                     extract($dm);
                     $linkdm = "index.php?act=sanpham&iddm=" . $id_dm;
                     echo ' <li>
-                      <a href="#.">   ' . $ten_dm . ' <span></span></a>
+                      <a href="#.">' . $ten_dm . '<span></span></a>
                     </li>';
                   }
                   ?>
@@ -360,7 +375,7 @@
                               <a href="' . $hinh . '" data-lighter
                                 ><i class="icon-magnifier"></i
                               ></a>
-                              <a href="#."><i class="icon-basket"></i></a>
+                              <a href="index.php?act=addtocart"></a>
                               <a href="#."><i class="icon-heart"></i></a>
                             </div>
                           </div>
@@ -372,8 +387,16 @@
                         <p>Lorem ipsum dolor sit amet</p>
                       </div>
                       
-                      <span class="price">' . $gia . '</span>
+                      <span class="price">' . $gia . 'đ</span>
+                      
                         </div>
+                      <form action="index.php?act=addtocart" method="post">
+                      <input type="hidden" name="id_sp" value="' . $id_sp . '">
+                      <input type="hidden" name="ten_sp" value="' . $ten_sp . '">
+                      <input type="hidden" name="img" value="' . $img . '">
+                      <input type="hidden" name="gia" value="' . $gia . '">
+                      <input type="submit" name="addtocart" value="Them gio hang" >
+                       </form> 
                   </div>';
                   $i = +1;
                 }
@@ -384,6 +407,7 @@
           </div>
         </div>
       </section>
+
 
 
 
