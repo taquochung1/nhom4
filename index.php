@@ -9,6 +9,7 @@ include "global.php";
 if (!isset($_SESSION['mycart'])) $_SESSION['mycart'] = [];
 $spnew = loadall_sanpham_detail();
 $dsdm = loadall_danhmuc();
+$spmoi = loadall_sanpham_home();
 if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
     $act = $_GET['act'];
     switch ($act) {

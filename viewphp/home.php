@@ -355,156 +355,29 @@
         <!-- New Arrival -->
         <div class="arrival-block single-img-demos">
           <!-- Item -->
-          <div class="item">
-            <!-- Images -->
-            <img class="img-1" src="viewphp/assetslayout/images/item-img-1-1.jpg" alt="" />
-            <!-- Overlay  -->
+          
+          <?php
+          foreach($spmoi as $sp){
+            extract($sp);
+            $hinh=$hinhpath .$img;
+            echo '<div class="item">
+            <img class="img-1" src="'.$hinh.'" alt="" />
             <div class="overlay">
-              <!-- Price -->
-              <span class="price"><small>$</small>299</span>
+              <span class="price">'.$gia.'</span>
               <div class="position-center-center">
                 <a href="viewphp/assetslayout/images/item-img-1-1.jpg" data-lighter><i class="icon-magnifier"></i></a>
               </div>
             </div>
-            <!-- Item Name -->
             <div class="item-name">
-              <a href="#.">wooden chair</a>
+              <a href="#.">'.$ten_sp.'</a>
               <p>Lorem ipsum dolor sit amet</p>
             </div>
-          </div>
+          </div>';
+          }
+          ?>
 
-          <!-- Item -->
-          <div class="item">
-            <!-- Images -->
-            <img class="img-1" src="viewphp/assetslayout/images/item-img-1-2.jpg" alt="" />
-            <!-- Overlay  -->
-            <div class="overlay">
-              <!-- Price -->
-              <span class="price"><small>$</small>299</span>
-              <div class="position-center-center">
-                <a href="viewphp/assetslayout/images/item-img-1-2.jpg" data-lighter><i class="icon-magnifier"></i></a>
-              </div>
-            </div>
-            <!-- Item Name -->
-            <div class="item-name">
-              <a href="#.">MINIMALIST WOO TOYS</a>
-              <p>Lorem ipsum dolor sit amet</p>
-            </div>
-          </div>
 
-          <!-- Item -->
-          <div class="item">
-            <!-- Images -->
-            <img class="img-1" src="viewphp/assetslayout/images/item-img-1-3.jpg" alt="" />
-            <!-- Overlay  -->
-            <div class="overlay">
-              <!-- Price -->
-              <span class="price"><small>$</small>299</span>
-              <div class="position-center-center">
-                <a href="viewphp/assetslayout/images/item-img-1-3.jpg" data-lighter><i class="icon-magnifier"></i></a>
-              </div>
-            </div>
-            <!-- Item Name -->
-            <div class="item-name">
-              <a href="#.">Concrete Shaving Kit</a>
-              <p>Lorem ipsum dolor sit amet</p>
-            </div>
-          </div>
-
-          <!-- Item -->
-          <div class="item">
-            <!-- Images -->
-            <img class="img-1" src="viewphp/assetslayout/images/item-img-1-4.jpg" alt="" />
-            <!-- Overlay  -->
-            <div class="overlay">
-              <!-- Price -->
-              <span class="price"><small>$</small>299</span>
-              <div class="position-center-center">
-                <a href="viewphp/assetslayout/images/item-img-1-4.jpg" data-lighter><i class="icon-magnifier"></i></a>
-              </div>
-            </div>
-            <!-- Item Name -->
-            <div class="item-name">
-              <a href="#.">PARAGON PENDANT</a>
-              <p>Lorem ipsum dolor sit amet</p>
-            </div>
-          </div>
-
-          <!-- Item -->
-          <div class="item">
-            <!-- Images -->
-            <img class="img-1" src="viewphp/assetslayout/images/item-img-1-5.jpg" alt="" />
-            <!-- Overlay  -->
-            <div class="overlay">
-              <!-- Price -->
-              <span class="price"><small>$</small>299</span>
-              <div class="position-center-center">
-                <a href="viewphp/assetslayout/images/item-img-1-5.jpg" data-lighter><i class="icon-magnifier"></i></a>
-              </div>
-            </div>
-            <!-- Item Name -->
-            <div class="item-name">
-              <a href="#.">crative lamp</a>
-              <p>Lorem ipsum dolor sit amet</p>
-            </div>
-          </div>
-
-          <!-- Item -->
-          <div class="item">
-            <!-- Images -->
-            <img class="img-1" src="viewphp/assetslayout/images/item-img-1-6.jpg" alt="" />
-            <!-- Overlay  -->
-            <div class="overlay">
-              <!-- Price -->
-              <span class="price"><small>$</small>299</span>
-              <div class="position-center-center">
-                <a href="viewphp/assetslayout/images/item-img-1-6.jpg" data-lighter><i class="icon-magnifier"></i></a>
-              </div>
-            </div>
-            <!-- Item Name -->
-            <div class="item-name">
-              <a href="#.">ECO FRIENDLY</a>
-              <p>Lorem ipsum dolor sit amet</p>
-            </div>
-          </div>
-
-          <!-- Item -->
-          <div class="item">
-            <!-- Images -->
-            <img class="img-1" src="viewphp/assetslayout/images/item-img-1-7.jpg" alt="" />
-            <!-- Overlay  -->
-            <div class="overlay">
-              <!-- Price -->
-              <span class="price"><small>$</small>299</span>
-              <div class="position-center-center">
-                <a href="viewphp/assetslayout/images/item-img-1-7.jpg" data-lighter><i class="icon-magnifier"></i></a>
-              </div>
-            </div>
-            <!-- Item Name -->
-            <div class="item-name">
-              <a href="#.">GEOMETRY STOOL</a>
-              <p>Lorem ipsum dolor sit amet</p>
-            </div>
-          </div>
-
-          <!-- Item -->
-          <div class="item">
-            <!-- Images -->
-            <img class="img-1" src="viewphp/assetslayout/images/item-img-1-8.jpg" alt="" />
-            <!-- Overlay  -->
-            <div class="overlay">
-              <!-- Price -->
-              <span class="price"><small>$</small>299</span>
-              <div class="position-center-center">
-                <a href="viewphp/assetslayout/images/item-img-1-8.jpg" data-lighter><i class="icon-magnifier"></i></a>
-              </div>
-            </div>
-            <!-- Item Name -->
-            <div class="item-name">
-              <a href="#.">CERAMIC STONE VASE</a>
-              <p>Lorem ipsum dolor sit amet</p>
-            </div>
-          </div>
+          
         </div>
       </section>
 

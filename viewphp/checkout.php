@@ -70,7 +70,7 @@
             <div class="collapse navbar-collapse" id="nav-open-btn">
               <ul class="nav">
                 <li class="dropdown">
-                  <a href="home.php" class="dropdown-toggle" data-toggle="dropdown">Trang chủ</a>
+                  <a href="index.php" class="dropdown-toggle" data-toggle="dropdown">Trang chủ</a>
                 </li>
                 <li class="dropdown">
                   <a href="index.php?act=sanpham">Sản phẩm</a>
