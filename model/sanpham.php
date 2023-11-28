@@ -39,7 +39,7 @@ function load_ten_dm($iddm){
     $sql="select * from danh_muc where id_dm=".$iddm;
     $dm=pdo_query_one($sql);
     extract($dm);
-    return $ten_sp;
+    return $iddm;
     } else {
         return "";
     }

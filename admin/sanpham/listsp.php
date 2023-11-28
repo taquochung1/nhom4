@@ -38,7 +38,7 @@
 <div id="main-content">
   <form action="index.php?act=listsp" method="post">
     <div class="">
-      <h1>Danh sách loại hàng</h1>
+      <h1>Danh sách sản phẩm</h1>
     </div>
     <input type="text" name="kyw">
     <select name="iddm">
@@ -90,7 +90,7 @@
   </table>
   <div class="another-button">
     <input class="btn btn-success" type="button" value="Xóa các mục đã chọn">
-    <a href="index.php?act=addsp"><input class="btn btn-success" type="button" value="Thêm loại hàng"></a>
+    <a href="index.php?act=addsp"><input class="btn btn-success" type="button" value="Thêm sản phẩm"></a>
   </div>
 
 </div>

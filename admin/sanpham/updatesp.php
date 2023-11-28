@@ -84,7 +84,7 @@ if (is_file($hinhpath)) {
     <div>
       <input type="hidden" name="id" value="<?= $id_sp ?>">
       <input type="submit" class="btn btn-success" name="capnhat" value="Cập nhật">
-      <a href="index.php?act=listdm"><input type="button" class="btn btn-success" value="Danh sách"></a>
+      <a href="index.php?act=listsp"><input type="button" class="btn btn-success" value="Danh sách"></a>
       <br>
     </div>
     <?php
